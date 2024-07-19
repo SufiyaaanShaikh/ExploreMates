@@ -101,3 +101,107 @@
 #hero .login-left {
     background: url("images/Login.webp") center/cover no-repeat;
 }
+
+/* Home Page  */
+/* header  */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 1em 3em;
+}
+
+header .logo img {
+    height: 4em;
+}
+
+header nav {
+    display: flex;
+    gap: 2em;
+}
+header nav a {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* Banner  */
+#main {
+    background: url("images/Banner.webp") center/cover no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-position: center;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 9em 4em 2em 4em;
+    
+}
+#main h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#main .main-search {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    height: 4em;
+    border-radius: 20px;
+    gap: 1em;
+    padding: 0em 0em 0em 20px;
+    margin-top: 3em;
+}
+#main .main-search input {
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+}
+#main .main-search input::placeholder {
+    color: #ffffff;
+    font-size: 16px;
+}
+#main .main-search img {
+    height: 1.3em;
+}
+#main .main-vac {
+    margin-top: 2em;
+}
+#main .main-vac h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;    
+}
+#main .main-vac .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3em;
+    margin-top: 2em;
+}
+#main .main-vac .container .block {
+    width: 100%;
+    height: 9em;
+    padding: 2em 1em;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+#main .main-vac .container .block:first-child {
+    background: url("images/bali.png") center/cover no-repeat;
+}
+#main .main-vac .container .block:nth-child(2) {
+    background: url("images/kerry.png") center/cover no-repeat;
+}
+#main .main-vac .container .block:nth-child(3) {
+    background: url("images/Sydney.png") center/cover no-repeat;
+}
+#main .main-vac .container .block:nth-child(4) {
+    background: url("images/paris.png") center/cover no-repeat;
+}
+#main .main-vac .container .block h4 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+}
