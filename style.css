@@ -415,5 +415,8 @@ header nav a {
     #hero .left {
         display: none;
     }
+    #hero .right {
+        padding: 0em 2em;
+    }
 
 }
