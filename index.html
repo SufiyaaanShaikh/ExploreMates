@@ -142,9 +142,27 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             //   arrow: true,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 3000,
             responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrow: false,
+                    },
+                },
+                {
+                    breakpoint: 641,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrow: false,
+                    },
+                },
                 {
                     breakpoint: 768,
                     settings: {

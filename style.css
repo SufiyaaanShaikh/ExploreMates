@@ -169,7 +169,7 @@ header nav a {
     background-blend-mode: multiply;
     background-attachment: fixed;
     height: 100vh;
-    padding: 0em 7em 0em 7em;
+    padding: 0em 7em;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -216,7 +216,7 @@ header nav a {
 }
 
 #main .main-vac h3 {
-    font-size: clamp(14px, 28px, 30px);
+    font-size: clamp(14px, 3vw, 30px);
     font-weight: 700;
     color: #ffffff;
 }
@@ -234,7 +234,7 @@ header nav a {
 }
 
 #main .main-vac .container .block {
-    width: clamp(100px, 285px, 300px) !important;
+    width: 285px !important;
     height: 200px;
     border-radius: 10px;
     cursor: pointer;
@@ -343,10 +343,31 @@ header nav a {
 /* Responsive  */
 @media (max-width: 1440px) {}
 
+/* Extra Large screen  */
+@media (max-width: 1281px) {
+    header {
+        padding: 0.5em 5em;
+    }
 
-@media (max-width: 1281px) {}
+    #main {
+        padding: 0em 5em;
+    }
 
+    #main h1 {
+        font-size: 50px;
+    }
 
+    #main .main-search {
+        margin-top: 1.5em;
+    }
+
+    #main .main-vac .container .block {
+        height: 150px;
+        width: 270px !important;
+    }
+}
+
+/* Large Screen  */
 @media (max-width: 1025px) {
     #hero .right h1 {
         font-size: 35px;
@@ -370,8 +391,33 @@ header nav a {
         margin: 2em 0em 1em 0em;
     }
 
+    header nav a {
+        font-size: 16px;
+    }
+
+    #main-how {
+        padding: 3em 5em;
+    }
+
+    #main-review {
+        padding: 2em 5em;
+    }
+
+    #main .main-vac .container .block {
+        width: 260px !important;
+    }
+
+    #main-how .container .card h3 {
+        font-size: 20px;
+    }
+
+    #main-how .container .card p {
+        font-size: 14px;
+    }
+
 }
 
+/* Medium Screen  */
 @media (max-width: 769px) {
     #hero .right {
         padding: 3em 2em 1em 2em;
@@ -402,10 +448,51 @@ header nav a {
     #hero .right form .acc-para {
         font-size: 16px;
     }
+    header {
+        padding: 0.5em 3em;
+    }
+    #main {
+        padding: 0em 3em;
+    }
+    #main h1 {
+        font-size: 35px;
+    }
+    #main .main-search input,#main .main-search input::placeholder  {
+        font-size: 14px;
+    }
+    #main .main-search {
+        gap: 0.7em;
+        height: 2.4em;
+        border-radius: 10px;
+    }
+    #main .main-search img {
+        height: 1em;
+    }
+    #main .main-vac {
+        margin-top: 1em;
+    }
+    #main-how {
+        padding: 3em;
+    }
+    #main-how .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #main-how h2 {
+        font-size: 40px;
+    }
+    #main-review {
+        padding: 2em 3em;
+    }
+    #main-review .container {
+        gap: 1em;
+        margin-top: 2em;
+    }
 }
 
+/* Small Screen  */
 @media (max-width: 641px) {}
 
+/* Extra Small Screen */
 @media (max-width: 480px) {
     #hero {
         display: grid;
@@ -415,8 +502,34 @@ header nav a {
     #hero .left {
         display: none;
     }
+
     #hero .right {
         padding: 0em 2em;
     }
+    #main {
+        padding: 2em 1em 1em 1em;
+        height: unset;
+    }
+    #main h1 {
+        font-size: 24px;
+        width: 70%;
+        padding-top: 4em;
+    }
+    #main .main-search {
+        width: 100%;
+    }
+    #main-how {
+        padding: 1em;
+    }
+    #main-how h2 {
+        font-size: 30px;
+    }
+    #main-how .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #main-review .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 
 }
