@@ -530,6 +530,9 @@ header nav a {
     #main-review .container {
         grid-template-columns: repeat(1, 1fr);
     }
+    #main-review {
+        padding: 1em 2em;
+    }
     
 
 }
