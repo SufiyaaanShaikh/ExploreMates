@@ -341,13 +341,7 @@ header nav a {
 }
 
 /* Responsive  */
-@media (max-width: 1440px) {
-
-    #hero .right {
-        display: block;
-
-    }
-}
+@media (max-width: 1440px) {}
 
 
 @media (max-width: 1281px) {}
@@ -413,12 +407,13 @@ header nav a {
 @media (max-width: 641px) {}
 
 @media (max-width: 480px) {
-    #hero  {
+    #hero {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+
     #hero .left {
         display: none;
     }
-    
+
 }
