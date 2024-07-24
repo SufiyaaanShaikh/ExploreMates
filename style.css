@@ -154,12 +154,20 @@ header .logo img {
 header nav {
     display: flex;
     gap: 2em;
+    transition: all 0.9s ease-in-out;
 }
 
 header nav a {
     font-size: 18px;
     font-weight: 500;
     color: #000;
+}
+.menu {
+    display: none;
+}
+.menu-ani {
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
 }
 
 /* Banner  */
@@ -448,41 +456,54 @@ header nav a {
     #hero .right form .acc-para {
         font-size: 16px;
     }
+
     header {
         padding: 0.5em 3em;
     }
+
     #main {
         padding: 0em 3em;
     }
+
     #main h1 {
         font-size: 35px;
     }
-    #main .main-search input,#main .main-search input::placeholder  {
+
+    #main .main-search input,
+    #main .main-search input::placeholder {
         font-size: 14px;
     }
+
     #main .main-search {
         gap: 0.7em;
         height: 2.4em;
         border-radius: 10px;
     }
+
     #main .main-search img {
         height: 1em;
     }
+
     #main .main-vac {
         margin-top: 1em;
     }
+
     #main-how {
         padding: 3em;
     }
+
     #main-how .container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     #main-how h2 {
         font-size: 40px;
     }
+
     #main-review {
         padding: 2em 3em;
     }
+
     #main-review .container {
         gap: 1em;
         margin-top: 2em;
@@ -506,33 +527,71 @@ header nav a {
     #hero .right {
         padding: 0em 2em;
     }
+    .menu {
+        display: block;
+    }
+    header {
+        padding: 0.5em 1em;
+    }
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        position: absolute;
+        bottom: -157px;
+        left: 0;
+        background: #ffffffc9;
+        width: 100%;
+        padding-bottom: 0.5em;
+        opacity: 0;
+        display: none;
+    }
+    header .nav-show {
+        opacity: 1;
+        display: flex;
+    } 
+
     #main {
         padding: 2em 1em 1em 1em;
         height: unset;
     }
+
     #main h1 {
-        font-size: 24px;
+        font-size: 30px;
         width: 70%;
         padding-top: 4em;
     }
+
     #main .main-search {
         width: 100%;
     }
+    #main .main-vac h3 {
+        font-size: 20px;
+    }
+    #main .main-vac .container .block h4 {
+        font-size: 14px;
+    }
+
     #main-how {
         padding: 1em;
     }
+
     #main-how h2 {
         font-size: 30px;
     }
+
     #main-how .container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     #main-review .container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     #main-review {
         padding: 1em 2em;
     }
-    
+
 
 }

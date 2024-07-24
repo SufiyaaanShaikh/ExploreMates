@@ -1,7 +1,9 @@
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav");
 
-$('.container').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
+menu.addEventListener("click", () => {
+  menu.classList.toggle("menu-ani");
+});
+menu.addEventListener("click", () => {
+  nav.classList.toggle("nav-show");
+});
