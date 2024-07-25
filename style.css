@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Poppins", sans-serif;
     /* overflow-x: hidden; */
     scroll-behavior: smooth;
     font-weight: normal;
@@ -154,7 +154,6 @@ header .logo img {
 header nav {
     display: flex;
     gap: 2em;
-    transition: all 0.9s ease-in-out;
 }
 
 header nav a {
@@ -162,9 +161,11 @@ header nav a {
     font-weight: 500;
     color: #000;
 }
+
 .menu {
     display: none;
 }
+
 .menu-ani {
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
@@ -527,12 +528,15 @@ header nav a {
     #hero .right {
         padding: 0em 2em;
     }
+
     .menu {
         display: block;
     }
+
     header {
         padding: 0.5em 1em;
     }
+
     header nav {
         flex-direction: column;
         justify-content: center;
@@ -547,10 +551,11 @@ header nav a {
         opacity: 0;
         display: none;
     }
+
     header .nav-show {
         opacity: 1;
         display: flex;
-    } 
+    }
 
     #main {
         padding: 2em 1em 1em 1em;
@@ -566,9 +571,11 @@ header nav a {
     #main .main-search {
         width: 100%;
     }
+
     #main .main-vac h3 {
         font-size: 20px;
     }
+
     #main .main-vac .container .block h4 {
         font-size: 14px;
     }
