@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
@@ -13,167 +14,358 @@
 
 <body>
     <!-- header start -->
-    <header>
+    <header class="flex items-center w-100">
         <div class="logo"><a href="#"><img src="images/Explore.svg" alt="logo"></a></div>
-        <nav class="">
-            <a href="#">Home</a>
-            <a href="#">Review</a>
-            <a href="login.html">Login</a>
-            <a href="singup.html">SingUp</a>
+        <nav class="flex">
+            <a href="#" class="fw-500 f-18">Home</a>
+            <a href="review.html" class="fw-500 f-18">Review</a>
+            <a href="login.html" class="fw-500 f-18">Login</a>
+            <a href="singup.html" class="fw-500 f-18">SingUp</a>
         </nav>
         <img src="images/menu.svg" alt="menu" class="menu">
     </header>
     <!-- header end  -->
     <!-- banner start  -->
-    <section id="main">
-        <h1>Journey with Like-Minded Explorers.</h1>
-        <div class="main-search">
-            <img src="images/search.svg" alt="search">
-            <input type="text" placeholder="Search Destinations">
+    <section id="main" class="vh-100 flex">
+        <h1 class="fw-700">Journey with Like-Minded Explorers.</h1>
+        <div class="main-search flex items-center ">
+            <img src="images/search-black.svg" alt="search" class="invert">
+            <input type="text" placeholder="Search Destinations" class="w-100">
         </div>
         <div class="main-vac">
-            <h3>Top Vacation Destinations</h3>
-            <div class="slide-container container">
+            <h3 class="fw-700">Top Vacation Destinations</h3>
+            <div class="slide-container container flex">
                 <div class="block">
-                    <img src="images/manali.jpg" alt="1">
-                    <h4>Manali, Himachal</h4>
+                    <img src="images/manali.jpg" alt="1" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Manali, Himachal</h4>
                 </div>
                 <div class="block">
-                    <img src="images/laddak.jpg" alt="2">
-                    <h4>Ladakh, Kashmir </h4>
+                    <img src="images/laddak.jpg" alt="2" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Ladakh, Kashmir </h4>
                 </div>
                 <div class="block">
-                    <img src="images/ooty.jpg" alt="3">
-                    <h4>Ooty, Tamil Nadu</h4>
+                    <img src="images/ooty.jpg" alt="3" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Ooty, Tamil Nadu</h4>
                 </div>
                 <div class="block">
-                    <img src="images/darjeeling.jpg" alt="4">
-                    <h4>Darjeeling, West Bengal</h4>
+                    <img src="images/darjeeling.jpg" alt="4" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Darjeeling, West Bengal</h4>
                 </div>
                 <div class="block">
-                    <img src="images/Andaman Nicobar.jpg" alt="5">
-                    <h4>Andaman Nicobara</h4>
+                    <img src="images/Andaman Nicobar.jpg" alt="5" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Andaman Nicobara</h4>
                 </div>
                 <div class="block">
-                    <img src="images/udaipur.jpg" alt="6">
-                    <h4>Udaipur, Rajasthan</h4>
+                    <img src="images/udaipur.jpg" alt="6" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Udaipur, Rajasthan</h4>
                 </div>
                 <div class="block">
-                    <img src="images/Coorg.jpg" alt="7">
-                    <h4>Coorg</h4>
+                    <img src="images/Coorg.jpg" alt="7" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Coorg</h4>
                 </div>
                 <div class="block">
-                    <img src="images/varanasi.jpg" alt="8">
-                    <h4>Varanasi, Uttar Pradesh</h4>
+                    <img src="images/varanasi.jpg" alt="8" class="h-100 w-100">
+                    <h4 class="fw-700 f-18">Varanasi, Uttar Pradesh</h4>
                 </div>
             </div>
         </div>
     </section>
     <!-- banner end  -->
     <!-- How start  -->
-    <section id="main-how">
-        <h2>How it works</h2>
-        <div class="container">
-            <div class="card">
+    <section id="main-how" class="vh-70 flex justify-content items-center sec-pad text-center">
+        <div class="title">
+            <h2 class="fw-700 sec-title">How it works</h2>
+            <p class="head-para para-c">It helps you, Explore more</p>
+        </div>
+
+        <div class="container grid grid-4">
+            <div class="card w-100">
                 <img src="images/search-black.svg" alt="search">
                 <h3>Search Destination</h3>
-                <p>Search and select a destination that you are traveling to.</p>
+                <p class="para-c">Search and select a destination that you are traveling to.</p>
             </div>
-            <div class="card">
+            <div class="card w-100">
                 <img src="images/partner.svg" alt="partner">
                 <h3>Find Travel Partners</h3>
-                <p>Browse through the list of trips, locals, and nearby users in that location.</p>
+                <p class="para-c">Browse through the list of trips, locals, and nearby users in that location.</p>
             </div>
-            <div class="card">
+            <div class="card w-100">
                 <img src="images/smile.svg" alt="smile">
                 <h3>Get Connected</h3>
-                <p>When you find someone that you want to meet up with, click the connect button and start chatting with
+                <p class="para-c">When you find someone that you want to meet up with, click the connect button and
+                    start chatting with
                     them.</p>
             </div>
-            <div class="card">
+            <div class="card w-100">
                 <img src="images/group.svg" alt="group">
                 <h3>Trip Together</h3>
-                <p>Plan together, meet up with your travel companion at a pre-decided public place and travel together.
+                <p class="para-c">Plan together, meet up with your travel companion at a pre-decided public place and
+                    travel together.
                 </p>
             </div>
         </div>
     </section>
     <!-- How end  -->
     <!-- Review start  -->
-    <section id="main-review">
+    <section id="main-review" class="vh-70 sec-pad">
         <div class="title">
-            <h4>Top places with reviews</h4>
-            <p class="head-para">Travelers reviews</p>
+            <h2 class="fw-700 sec-title text-center">Top places with reviews</h2>
+            <p class="head-para f-18 para-c text-center">Travelers reviews</p>
         </div>
-        <div class="container">
+        <div class="container grid grid-4">
             <div class="card">
-                <div class="img-block"><img src="images/bali.png" alt="bali"></div>
+                <div class="img-block"><img src="images/laddak.jpg" alt="laddak" class="h-100 w-100"></div>
                 <div class="content">
-                    <p>Bali, Indonasia</p>
-                    <h5>The Bali</h5>
+                    <p class="para-c">Ladakh, Kashmir</p>
+                    <h5>Ladakh</h5>
                 </div>
             </div>
             <div class="card">
-                <div class="img-block"><img src="images/kerry.png" alt="kerry"></div>
+                <div class="img-block"><img src="images/nainital.jpg" alt="nainital" class="h-100 w-100"></div>
                 <div class="content">
-                    <p>Kerry, Ireland</p>
-                    <h5>The Karry</h5>
+                    <p class="para-c">Nainital, Uttarakhand</p>
+                    <h5>Nainital</h5>
                 </div>
             </div>
             <div class="card">
-                <div class="img-block"><img src="images/Sydney.png" alt="Sydney"></div>
+                <div class="img-block"><img src="images/ooty.jpg" alt="ooty" class="h-100 w-100"></div>
                 <div class="content">
-                    <p>Sydney, Australia</p>
-                    <h5>The Sydney</h5>
+                    <p class="para-c">Ooty, Tamil Nadu</p>
+                    <h5>Ooty</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-block"><img src="images/varanasi.jpg" alt="varanasi" class="h-100 w-100"></div>
+                <div class="content">
+                    <p class="para-c">Varanasi, Uttar Pradesh</p>
+                    <h5>Varanasi</h5>
                 </div>
             </div>
         </div>
     </section>
     <!-- Review end  -->
+    <!-- Feed start  -->
+    <section id="main-feed" class="vh-70 sec-pad">
+        <div class="title">
+            <h2 class="fw-700 sec-title text-center">Travel Feed</h2>
+            <p class="head-para f-18 para-c text-center">Find a travel buddy</p>
+        </div>
+        <div class="container grid grid-4">
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card grid">
+                <div class="img-block">
+                    <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                </div>
+                <div class="content">
+                    <h3 class="fw-500">Rahul</h3>
+                    <div class="des flex g-7 items-center ">
+                        <img src="images/location.svg" alt="locals" class="h-14">
+                        <p class="para-c">Nainital</p>
+                    </div>
+                    <div class="date flex g-7 items-center ">
+                        <img src="images/calendar.svg" alt="calendar" class="h-14">
+                        <p class="para-c">2 days ago</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Feed end  -->
     <!-- Scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $(".slide-container").slick({
+        // $(".slide-container").slick({
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 300,
+        //     slidesToShow: 4,
+        //     slidesToScroll: 1,
+        //     //   arrow: true,
+        //     // autoplay: true,
+        //     autoplaySpeed: 3000,
+        //     responsive: [
+        //         {
+        //             breakpoint: 1025,
+        //             settings: {
+        //                 slidesToShow: 4,
+        //                 slidesToScroll: 1,
+        //                 dots: true,
+        //                 arrow: false,
+        //             },
+        //         },
+        //         {
+        //             breakpoint: 641,
+        //             settings: {
+        //                 slidesToShow: 1,
+        //                 slidesToScroll: 1,
+        //                 dots: true,
+        //                 arrow: false,
+        //             },
+        //         },
+        //         {
+        //             breakpoint: 480,
+        //             settings: {
+        //                 slidesToShow: 1,
+        //                 slidesToScroll: 1,
+        //                 dots: true,
+        //                 arrow: false,
+        //             },
+        //         },
+        //     ],
+        // });
+        $('.slide-container').slick({
             dots: true,
             infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            //   arrow: true,
-            // autoplay: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            variableWidth: true,
+            autoplay: true,
             autoplaySpeed: 3000,
             responsive: [
                 {
-                    breakpoint: 1025,
+                    breakpoint: 768,
                     settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                        dots: true,
-                        arrow: false,
-                    },
-                },
-                {
-                    breakpoint: 641,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: true,
-                        arrow: false,
-                    },
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: true,
-                        arrow: false,
-                    },
-                },
-            ],
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     </script>
 </body>

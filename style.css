@@ -14,6 +14,83 @@
     transition: all 0.2s ease-in-out;
 }
 
+/* Utility CSS  */
+.invert {
+    filter: invert(1);
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.vh-70 {
+    min-height: 70vh;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.h-14 {
+    height: 14px;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.sec-pad {
+    padding: 2em 7em;
+}
+
+.sec-title {
+    font-size: 40px;
+}
+
+.para-c {
+    color: #4e515c;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.g-7 {
+    gap: 7px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* Slick slider CSS  */
 
 .slick-arrow {
@@ -22,7 +99,7 @@
 
 .slick-dots {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -52,10 +129,7 @@
 
 /* Sing Up Page  */
 #hero {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
-    width: 100%;
 }
 
 #hero .left {
@@ -64,38 +138,28 @@
 
 #hero .right {
     padding: 3em 6em 1em 6em;
-    height: 100%;
-    width: 100%;
     overflow-y: scroll;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 #hero .right h1 {
     font-size: 48px;
-    font-weight: 700;
     margin-bottom: 15px;
 }
 
 #hero .right h3 {
     font-size: 24px;
     color: #5B5B5B;
-    font-weight: 500;
 }
 
 #hero .right form {
-    display: flex;
     flex-direction: column;
     margin-top: 1em;
-    width: 100%;
 }
 
 #hero .right form input {
     border-bottom: 1px solid #B4B4B4;
     padding: 2em 0em 1em 0.7em;
-    font-size: 18px;
-    font-weight: 500;
 }
 
 #hero .right form input::placeholder {
@@ -109,7 +173,6 @@
     background: #4169E1;
     color: #ffffff;
     font-size: 20px;
-    font-weight: 700;
     padding: 0.8em;
     border-radius: 50px;
     margin: 3em 0em 1em 0em;
@@ -118,7 +181,6 @@
 
 #hero .right form .acc-para {
     font-size: 20px;
-    font-weight: 500;
     padding-top: 0.5em;
     align-self: center;
 }
@@ -126,25 +188,23 @@
 #hero .right form .acc-para a {
     color: #4169E1;
     margin-left: 0.4em;
-    font-weight: 500;
 }
 
 /* Log in Page  */
 #hero .login-left {
-    background: url("images/Login.webp") center/cover no-repeat;
+    background: url("images/login.jpg") center/cover no-repeat;
 }
 
 /* Home Page  */
 /* header  */
 header {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     position: fixed;
-    width: 100%;
+    top: 0;
     padding: 0.5em 7em;
     background: #ffffffc9;
     z-index: 4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
 }
 
 header .logo img {
@@ -152,13 +212,10 @@ header .logo img {
 }
 
 header nav {
-    display: flex;
     gap: 2em;
 }
 
 header nav a {
-    font-size: 18px;
-    font-weight: 500;
     color: #000;
 }
 
@@ -177,9 +234,7 @@ header nav a {
     background-position: center;
     background-blend-mode: multiply;
     background-attachment: fixed;
-    height: 100vh;
     padding: 0em 7em;
-    display: flex;
     flex-direction: column;
     justify-content: end;
 
@@ -187,17 +242,14 @@ header nav a {
 
 #main h1 {
     font-size: 60px;
-    font-weight: 700;
     color: #ffffff;
     width: 50%;
 }
 
 #main .main-search {
     width: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    display: flex;
-    align-items: center;
     height: 3em;
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
     gap: 1em;
     padding: 0em 0em 0em 20px;
@@ -205,15 +257,14 @@ header nav a {
 }
 
 #main .main-search input {
-    background: transparent;
     font-size: 16px;
-    width: 100%;
+    background: transparent;
     color: #ffffff;
 }
 
 #main .main-search input::placeholder {
-    color: #ffffff;
     font-size: 16px;
+    color: #ffffff;
 }
 
 #main .main-search img {
@@ -221,21 +272,20 @@ header nav a {
 }
 
 #main .main-vac {
-    margin-top: 2em;
+    margin: 2em 0em;
 }
 
 #main .main-vac h3 {
     font-size: clamp(14px, 3vw, 30px);
-    font-weight: 700;
     color: #ffffff;
 }
 
 #main .main-vac .container {
-    display: flex;
     gap: 3em;
     margin-top: 2em;
-    overflow: auto;
     padding-bottom: 2em;
+    overflow: auto;
+    overflow-y: hidden;
 }
 
 .container::-webkit-scrollbar {
@@ -251,44 +301,44 @@ header nav a {
     flex: 0 0 auto;
 }
 
-#main .main-vac .container .block img {
-    height: 100%;
+#main .main-vac .container .block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+    border-radius: 10px;
+}
+
+#main .main-vac .container .block img {
     object-fit: cover;
     border-radius: 10px;
 }
 
-
 #main .main-vac .container .block h4 {
     color: #ffffff;
-    font-weight: 700;
-    font-size: 18px;
     position: absolute;
     bottom: 15px;
-    left: 10px;
+    left: 9px;
+    z-index: 4;
 }
 
 /* How it Works  */
 #main-how {
-    padding: 3em 7em;
-    text-align: center;
+    flex-direction: column;
 }
 
-#main-how h2 {
-    font-size: 48px;
-    font-weight: 700;
-}
+/* #main-how h2 {} */
 
 #main-how .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
-    padding: 2em 0em;
+    padding: 4em 0em;
 }
 
 #main-how .container .card {
     /* height: 10em; */
-    width: 100%;
     padding: 2em 1em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 15px;
@@ -300,48 +350,44 @@ header nav a {
 
 #main-how .container .card h3 {
     font-size: 24px;
-    margin: 1em 0em 0.5em 0em;
+    margin: 0.5em 0em;
 }
 
 /* Review  */
 #main-review {
-    padding: 2em 7em;
-
     background: linear-gradient(0deg, #9fb7fd8c, transparent);
 }
 
-#main-review .title h4 {
-    font-size: 30px;
-    font-weight: 700;
+/* #main-review .title h2 {
+    text-align: center;
 }
 
 #main-review .title .head-para {
-    font-size: 18px;
-    margin-top: 10px;
-}
+    text-align: center;
+} */
 
 #main-review .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     margin-top: 2.5em;
 }
 
 #main-review .container .img-block {
+    height: 300px;
     border-radius: 15px;
 }
 
 #main-review .container .img-block img {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
+#main-review .container .content {
+    margin-top: 15px;
+}
+
 #main-review .container .content p {
-    color: #5B5B5B;
     font-size: 14px;
-    margin: 0.5em 0em 0.2em 0em;
+    /* margin: 0px 0px */
 }
 
 #main-review .container .content h5 {
@@ -349,19 +395,85 @@ header nav a {
     font-weight: 600;
 }
 
+/* Feed  */
+#main-feed .container {
+    gap: 25px;
+    margin-top: 2.5em;
+}
+
+/* #main-feed .container .card .img-block {
+    height: 100%;
+    width: 100%;
+} */
+#main-feed .container .card .img-block img {
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+#main-feed .container .card {
+    height: 350px;
+    grid-template-rows: 50% 40%;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#main-feed .container .card .content {
+    padding: 20px;
+}
+
+#main-feed .container .card .content h3 {
+    margin-left: 14px;
+    font-size: 24px;
+}
+
+/* Review Page  */
+#review-head {
+    flex-direction: column;
+    gap: 2.5em;
+    min-height: 50vh;
+    padding: 2em 7em;
+    margin-top: 5em;
+}
+
+#review-head h1 {
+    font-size: 60px;
+    width: 60%;
+    line-height: 65px;
+    text-align: center;
+}
+
+#review-head form {
+    grid-template-columns: 90% 10%;
+    height: 60px;
+    width: 40%;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 0px 15px;
+}
+
+#review-head form input {
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#review-head form input::placeholder {
+    color: #4e515c;
+
+}
+
+#review-head form button {
+    cursor: pointer;
+    background: unset;
+    opacity: 0.5;
+}
+
+
+
 /* Responsive  */
 @media (max-width: 1440px) {}
 
 /* Extra Large screen  */
 @media (max-width: 1281px) {
-    header {
-        padding: 0.5em 5em;
-    }
-
-    #main {
-        padding: 0em 5em;
-    }
-
     #main h1 {
         font-size: 50px;
     }
@@ -378,6 +490,8 @@ header nav a {
 
 /* Large Screen  */
 @media (max-width: 1025px) {
+
+    /* SingUp Page   */
     #hero .right h1 {
         font-size: 35px;
     }
@@ -400,20 +514,37 @@ header nav a {
         margin: 2em 0em 1em 0em;
     }
 
+    /* Home Page  */
+    /* Header  */
+
+    header {
+        padding: 0.5em 5em;
+    }
+
     header nav a {
         font-size: 16px;
     }
 
-    #main-how {
-        padding: 3em 5em;
+    /* Banner  */
+    #main {
+        padding: 0em 5em;
     }
 
-    #main-review {
-        padding: 2em 5em;
+    #main h1 {
+        font-size: 45px;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #main .main-vac .container .block {
         width: 260px !important;
+    }
+
+    /* How it Works  */
+    #main-how {
+        padding: 3em 5em;
     }
 
     #main-how .container .card h3 {
@@ -424,10 +555,23 @@ header nav a {
         font-size: 14px;
     }
 
+    /* Review  */
+    #main-review {
+        padding: 2em 5em;
+    }
+
+
+    /* Feed  */
+    #main-feed {
+        padding: 2em 5em;
+    }
+
 }
 
 /* Medium Screen  */
 @media (max-width: 769px) {
+
+    /* SingUp Page  */
     #hero .right {
         padding: 3em 2em 1em 2em;
     }
@@ -458,10 +602,13 @@ header nav a {
         font-size: 16px;
     }
 
+    /* Home Page  */
+    /* Header  */
     header {
         padding: 0.5em 3em;
     }
 
+    /* Banner  */
     #main {
         padding: 0em 3em;
     }
@@ -489,18 +636,12 @@ header nav a {
         margin-top: 1em;
     }
 
+    /* How it Works  */
     #main-how {
         padding: 3em;
     }
 
-    #main-how .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #main-how h2 {
-        font-size: 40px;
-    }
-
+    /* Review  */
     #main-review {
         padding: 2em 3em;
     }
@@ -509,6 +650,15 @@ header nav a {
         gap: 1em;
         margin-top: 2em;
     }
+
+    /* Feed  */
+    #main-feed {
+        padding: 2em 3em;
+    }
+
+    #main-feed .container {
+        gap: 1em;
+    }
 }
 
 /* Small Screen  */
@@ -516,6 +666,8 @@ header nav a {
 
 /* Extra Small Screen */
 @media (max-width: 480px) {
+
+    /* SingUp Page  */
     #hero {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -529,6 +681,8 @@ header nav a {
         padding: 0em 2em;
     }
 
+    /* Home Page  */
+    /* Header  */
     .menu {
         display: block;
     }
@@ -543,20 +697,21 @@ header nav a {
         align-items: center;
         gap: 1.5em;
         position: absolute;
-        bottom: -157px;
+        bottom: -187px;
         left: 0;
         background: #ffffffc9;
         width: 100%;
         padding-bottom: 0.5em;
         opacity: 0;
-        display: none;
+        display: none !important;
     }
 
     header .nav-show {
         opacity: 1;
-        display: flex;
+        display: flex !important;
     }
 
+    /* Banner  */
     #main {
         padding: 2em 1em 1em 1em;
         height: unset;
@@ -580,25 +735,33 @@ header nav a {
         font-size: 14px;
     }
 
+    /* How it works  */
     #main-how {
-        padding: 1em;
+        padding: 2em 1em;
     }
 
-    #main-how h2 {
+    .title h2 {
         font-size: 30px;
     }
 
-    #main-how .container {
+    .title .head-para {
+        font-size: 14px;
+    }
+
+
+    .container {
+        padding: 2em 0em 0em !important;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    #main-review .container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
+    /* Review  */
     #main-review {
-        padding: 1em 2em;
+        padding: 2em 1em;
     }
 
+    /* Feed  */
+    #main-feed {
+        padding: 2em 1em;
+    }
 
 }
