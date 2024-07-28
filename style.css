@@ -729,7 +729,7 @@ header nav a {
 
     #main .main-vac .container {
         margin-top: 0em;
-        padding-bottom: 2em !important;
+        padding: 1em 0em 2em 0em !important;
     }
 
     #main .main-search {
