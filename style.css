@@ -67,14 +67,6 @@
     font-size: 18px;
 }
 
-.sec-pad {
-    padding: 3em 14em;
-}
-
-.sec-title {
-    font-size: 40px;
-    line-height: 48px;
-}
 
 .para-c {
     color: #4e515c;
@@ -207,14 +199,17 @@
 
 /* Home Page  */
 /* header  */
+
 header {
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    padding: 0.5em 14em;
     background: #ffffffc9;
     z-index: 4;
+    position: fixed;
+    top: 0;
+}
 
+header .sec {
+    justify-content: space-between;
+    padding: 0.5em 0em;
 }
 
 header.header-active {
@@ -253,20 +248,21 @@ header nav a:hover {
     background-position: center;
     background-blend-mode: multiply;
     background-attachment: fixed;
-    padding: 0em 14em;
+}
+
+#main .sec {
     flex-direction: column;
     justify-content: end;
-
+    /* margin-top: 5em; */
 }
 
 #main h1 {
-    font-size: 60px;
     color: #ffffff;
     width: 50%;
 }
 
 #main .main-search {
-    width: 50%;
+    width: 60%;
     height: 3em;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
@@ -347,6 +343,9 @@ header nav a:hover {
 /* How it Works  */
 #main-how {
     background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
+}
+
+#main-how .sec {
     flex-direction: column;
 }
 
@@ -382,9 +381,11 @@ header nav a:hover {
 }
 
 /* Review  */
-/* #main-review {
-    background: linear-gradient(0deg, #DEE7FF, #F8F9FF);
-} */
+#main-review .sec {
+    flex-direction: column;
+    gap: 2em;
+    /* background: linear-gradient(0deg, #DEE7FF, #F8F9FF); */
+}
 
 #main-review .container {
     gap: 1em;
@@ -463,7 +464,7 @@ header nav a:hover {
 }
 
 /* Review Page  */
-#review-head {
+#review-head .sec {
     flex-direction: column;
     gap: 2.5em;
     min-height: 50vh;
@@ -471,8 +472,7 @@ header nav a:hover {
 }
 
 #review-head h1 {
-    font-size: 60px;
-    width: 70%;
+    width: 80%;
     line-height: 65px;
     text-align: center;
 }
@@ -548,7 +548,7 @@ header nav a:hover {
 }
 
 #review .review-container .block {
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     gap: 3em;
 }
 
@@ -619,7 +619,7 @@ header nav a:hover {
 
 #single-r h1 {
     margin-bottom: 1em;
-    font-size: 60px;
+    line-height: 48px
 }
 
 #single-r .content {
@@ -637,10 +637,6 @@ header nav a:hover {
 /* Extra Large screen  */
 @media (max-width: 1281px) {
 
-    #main h1,
-    #review-head h1 {
-        font-size: 50px;
-    }
 
     #main .main-search {
         margin-top: 1.5em;
@@ -654,11 +650,9 @@ header nav a:hover {
     #review-head h1 {
         width: 90%;
     }
+
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
-    }
-    #single-r h1 {
-        font-size: 50px;
     }
 }
 
@@ -700,13 +694,6 @@ header nav a:hover {
     }
 
     /* Banner  */
-    #main {
-        padding: 0em 5em;
-    }
-
-    #main h1 {
-        font-size: 45px;
-    }
 
     .container {
         grid-template-columns: repeat(2, 1fr);
@@ -805,10 +792,6 @@ header nav a:hover {
         padding: 0em 3em;
     }
 
-    #main h1 {
-        font-size: 35px;
-    }
-
     #main .main-search input,
     #main .main-search input::placeholder {
         font-size: 14px;
@@ -854,7 +837,6 @@ header nav a:hover {
 
     /* review Page  */
     #review-head h1 {
-        font-size: 35px;
         line-height: 45px;
     }
 
@@ -875,12 +857,10 @@ header nav a:hover {
         font-size: 14px;
     }
 
-    #single-r h1 {
-        font-size: 35px;
-    }
     .sec-pad {
         padding: 2em 3em;
     }
+
     #single-r .content {
         padding: 2em 4em;
     }
@@ -944,8 +924,6 @@ header nav a:hover {
     }
 
     #main h1 {
-        font-size: 30px;
-        width: 75%;
         padding-top: 4em;
     }
 
@@ -1006,40 +984,45 @@ header nav a:hover {
     }
 
     #review-head h1 {
-        font-size: 26px;
         line-height: 35px;
     }
+
     #review-head form {
         height: 50px;
         width: 80%;
     }
+
     #review-head form input {
         border-radius: 20px;
         font-size: 14px;
     }
+
     #review {
         padding: 2em 1em;
     }
+
     #review .title {
         margin-bottom: 2em;
     }
-    .sec-title {
-        font-size: 30px;
+
+    #single-r h1{
+        width: unset;
         line-height: 38px;
     }
+
     #review .review-container {
         gap: 1en;
     }
+
     #single-r {
-        padding: 2em 1em;
+        /* margin-top: 5em; */
     }
-    #single-r h1 {
-        font-size: 30px;
-    }
+
     #single-r .img-block {
         margin: 0em;
     }
+
     #single-r .content {
-        padding: 1em 2em;
+        padding: 1em;
     }
 }
