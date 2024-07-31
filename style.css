@@ -17,18 +17,14 @@
 /* Utility CSS  */
 
 
-
-.para-c {
-    color: #4e515c;
+.slick-center {
+    /* scale: 1.09 !important; */
+    /* border-radius: 10px !important; */
 }
 
-
-
-.g-7 {
-    gap: 7px;
+.slick-list {
+    overflow: visible !important;
 }
-
-
 
 /* Slick slider CSS  */
 
@@ -53,7 +49,7 @@
 }
 
 .slick-dots li.slick-active::marker {
-    color: #FFC107 !important;
+    color: rgb(45 104 248) !important;
 }
 
 .slick-dots li button {
@@ -62,7 +58,7 @@
 
 .slick-track {
     display: flex !important;
-    gap: 10px;
+    gap: 20px;
 }
 
 .slick-slider .slick-track,
@@ -154,12 +150,13 @@ header {
 
 header .sec {
     justify-content: space-between;
-    padding: 0.5em 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 header.header-active {
     background: #ffffff;
-    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 header .logo img {
@@ -232,7 +229,8 @@ header nav a:hover {
 }
 
 #main .main-vac {
-    margin: 2em 0em;
+    padding-bottom: 2em;
+    margin-top: 2em;
 }
 
 #main .main-vac h3 {
@@ -296,7 +294,7 @@ header nav a:hover {
 
 #main-how .container {
     gap: 1em;
-    padding: 4em 0em;
+    padding: 3em 0em;
 }
 
 #main-how .container .card {
@@ -328,8 +326,7 @@ header nav a:hover {
 /* Review  */
 #main-review .sec {
     flex-direction: column;
-    gap: 2em;
-    /* background: linear-gradient(0deg, #DEE7FF, #F8F9FF); */
+    /* gap: 2em; */
 }
 
 #main-review .container {
@@ -348,7 +345,7 @@ header nav a:hover {
 
 #main-review .container .img-block img {
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #main-review .container .content {
@@ -381,20 +378,21 @@ header nav a:hover {
 }
 
 /* Feed  */
+
 #main-feed .container {
     gap: 2em 1em;
     margin-top: 2.5em;
 }
 
 #main-feed .container .card .img-block img {
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
 }
 
 #main-feed .container .card {
     height: 350px;
     grid-template-rows: 50% 40%;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -411,8 +409,8 @@ header nav a:hover {
 #review-head .sec {
     flex-direction: column;
     gap: 2.5em;
-    min-height: 50vh;
-    margin-top: 5em;
+    min-height: 40vh;
+    margin-top: 7em;
 }
 
 #review-head h1 {
@@ -423,15 +421,14 @@ header nav a:hover {
 
 #review-head form {
     grid-template-columns: 90% 10%;
-    height: 60px;
     width: 50%;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    padding: 0px 15px;
+    padding: 15px;
 }
 
 #review-head form input {
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 16px;
 }
 
@@ -488,7 +485,7 @@ header nav a:hover {
 }
 
 #review .review-container {
-    gap: 3em;
+    gap: 2em;
 }
 
 #review .review-container .block {
@@ -502,12 +499,12 @@ header nav a:hover {
 
 #review .review-container .block .img-block img {
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 #review .review-container .block .content {
-    gap: 1.3em;
+    gap: 0.3em;
     padding: 1.5em 0em;
 }
 
@@ -558,7 +555,7 @@ header nav a:hover {
 
 #single-r .img-block img {
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #single-r h1 {
@@ -567,7 +564,10 @@ header nav a:hover {
 }
 
 #single-r .content {
-    padding: 2em 6em;
+    padding: 2em 4em;
+}
+#single-r .content p {
+    text-align: justify;
 }
 
 .star {
@@ -595,9 +595,7 @@ header nav a:hover {
         width: 90%;
     }
 
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
 }
 
 /* Large Screen  */
@@ -628,16 +626,12 @@ header nav a:hover {
 
     /* Home Page  */
     /* Header  */
-
-    header {
-        padding: 0.5em 5em;
-    }
-
-    header nav a {
+    s header nav a {
         font-size: 16px;
     }
 
     /* Banner  */
+
 
     .container {
         grid-template-columns: repeat(2, 1fr);
@@ -709,9 +703,6 @@ header nav a:hover {
 
     /* Home Page  */
     /* Header  */
-    header {
-        padding: 0.5em 3em;
-    }
 
     /* Banner  */
 
@@ -799,9 +790,6 @@ header nav a:hover {
         display: block;
     }
 
-    header {
-        padding: 0.5em 1em;
-    }
 
     header nav {
         flex-direction: column;
@@ -834,6 +822,7 @@ header nav a:hover {
 
     #main .main-vac {
         margin-top: 3em;
+        padding-bottom: unset;
     }
 
     #main .main-vac .container {
@@ -892,7 +881,7 @@ header nav a:hover {
         margin-bottom: 2em;
     }
 
-    #single-r h1{
+    #single-r h1 {
         width: unset;
         line-height: 38px;
     }

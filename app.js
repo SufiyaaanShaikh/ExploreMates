@@ -1,3 +1,5 @@
+
+// Scroll 
 $(window).on("scroll load", function () {
   if ($(window).scrollTop() > 90) {
     $("header").addClass("header-active");
@@ -6,6 +8,8 @@ $(window).on("scroll load", function () {
   }
 });
 
+
+// Menu 
 const menu = document.querySelector(".menu");
 const nav = document.querySelector("nav");
 

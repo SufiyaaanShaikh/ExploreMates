@@ -39,7 +39,7 @@
             </div>
             <div class="main-vac">
                 <h3 class="fw-700">Top Vacation Destinations</h3>
-                <div class="slide-container container flex">
+                <div class="slide-container container ">
                     <div class="block">
                         <img src="images/manali.jpg" alt="1" class="h-100 w-100">
                         <h4 class="fw-500 f-16">Manali, Himachal</h4>
@@ -80,7 +80,7 @@
     <!-- banner end  -->
     <!-- How start  -->
     <section id="main-how" class="vh-70">
-        <div class="sec flex justify-content items-center  text-center vh-70 sec-pad">
+        <div class="sec flex justify-content items-center  text-center vh-70 pad">
             <div class="title">
                 <h2 class="fw-700 sec-head">How it works?</h2>
                 <p class="head-para para-c para-f">From Start to Finish</p>
@@ -95,19 +95,22 @@
                 <div class="card w-100">
                     <img src="images/partner.svg" alt="partner">
                     <h3 class="fw-500">Find Travel Partners</h3>
-                    <p class="para-c para-f">Browse through the list of trips, locals, and nearby users in that location.</p>
+                    <p class="para-c para-f">Browse through the list of trips, locals, and nearby users in that
+                        location.</p>
                 </div>
                 <div class="card w-100">
                     <img src="images/smile.svg" alt="smile">
                     <h3 class="fw-500">Get Connected</h3>
-                    <p class="para-c para-f">When you find someone that you want to meet up with, click the connect button and
+                    <p class="para-c para-f">When you find someone that you want to meet up with, click the connect
+                        button and
                         start chatting with
                         them.</p>
                 </div>
                 <div class="card w-100">
                     <img src="images/group.svg" alt="group">
                     <h3 class="fw-500">Trip Together</h3>
-                    <p class="para-c para-f">Plan together, meet up with your travel companion at a pre-decided public place
+                    <p class="para-c para-f">Plan together, meet up with your travel companion at a pre-decided public
+                        place
                         and
                         travel together.
                     </p>
@@ -119,7 +122,7 @@
     <!-- How end  -->
     <!-- Review start  -->
     <section id="main-review" class="vh-70 ">
-        <div class="sec vh-70 flex justify-content items-center sec-pad">
+        <div class="sec vh-70 flex justify-content items-center pad">
             <div class="title">
                 <h2 class="fw-700 sec-head text-center">Top places with reviews</h2>
                 <p class="head-para  para-c para-f text-center">Travelers reviews</p>
@@ -174,7 +177,7 @@
     <!-- Review end  -->
     <!-- Feed start  -->
     <section id="main-feed" class="vh-70">
-        <div class="sec vh-70 sec-pad">
+        <div class="sec vh-70 pad">
             <div class="title">
                 <h2 class="fw-700 sec-head text-center">Travel Feed</h2>
                 <p class="head-para  para-c para-f text-center">Find a travel buddy</p>
@@ -328,7 +331,38 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        // $(".slide-container").slick({
+        $('.slide-container').slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '90px',
+            slidesToShow: 3,
+            variableWidth: true,
+            // autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+              // $(".slide-container").slick({
         //     dots: true,
         //     infinite: true,
         //     speed: 300,
@@ -367,36 +401,6 @@
         //         },
         //     ],
         // });
-        $('.slide-container').slick({
-            dots: true,
-            infinite: true,
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            variableWidth: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
     </script>
 </body>
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
