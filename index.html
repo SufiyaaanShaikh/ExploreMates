@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -18,15 +18,19 @@
     <header class="w-100">
         <div class="sec flex items-center">
             <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
-            <nav class="flex">
+            <nav class="flex items-center">
                 <a href="index.html" class="fw-500 f-16">Home</a>
                 <a href="review.html" class="fw-500 f-16">Review</a>
-                <a href="login.html" class="fw-500 f-16">Login</a>
-                <a href="singup.html" class="fw-500 f-16">SingUp</a>
+                <div id="log" class="flex ">
+                    <a href="login.html" class="fw-500 f-16">Login</a>
+                    <a id="singup" href="singup.html" class="fw-500 f-16">SingUp</a>
+                </div>
+                <div class="" id="user">
+                    <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                </div>
             </nav>
             <img src="images/menu.svg" alt="menu" class="menu">
         </div>
-
     </header>
     <!-- header end  -->
     <!-- banner start  -->
@@ -128,44 +132,103 @@
                 <p class="head-para  para-c para-f text-center">Travelers reviews</p>
             </div>
             <div class="container grid grid-4">
-                <div class="card">
+                <div class="card grid">
                     <a href="single-review.html">
-                        <div class="img-block"><img src="images/laddak.jpg" alt="laddak" class="h-100 w-100"></div>
+                        <div class="img-block h-100"><img src="images/laddak.jpg" alt="laddak" class="h-100 w-100">
+                        </div>
 
                     </a>
                     <div class="content">
+                        <div class="content-title flex">
+                            <h5>Ladakh</h5>
+                            <div class="rating flex items-center">
+                                <p>7.5</p>
+                                <img src="images/check-star.svg" alt="star">
+                            </div>
+                        </div>
                         <p class="para-c para-f">Ladakh, Kashmir</p>
-                        <h5>Ladakh</h5>
+                        <div class="para">
+                            Mumbai, often known as the City of Dreams, offers a rich and diverse experience that
+                            captivated me during a recent city tour. The journey began at the iconic Gateway of India, a
+                            majestic colonial-era monument that stands proudly overlooking the Arabian Sea.
+                        </div>
+                        <span>
+                            <a href="single-review.html" class="read para-c">read more...</a>
+                        </span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card grid">
                     <a href="single-review.html">
-                        <div class="img-block"><img src="images/nainital.jpg" alt="nainital" class="h-100 w-100"></div>
+                        <div class="img-block h-100"><img src="images/nainital.jpg" alt="nainital" class="h-100 w-100">
+                        </div>
 
                     </a>
                     <div class="content">
+                        <div class="content-title flex">
+                            <h5>Nainital</h5>
+                            <div class="rating flex items-center">
+                                <p>7.5</p>
+                                <img src="images/check-star.svg" alt="star">
+                            </div>
+                        </div>
                         <p class="para-c para-f">Nainital, Uttarakhand</p>
-                        <h5>Nainital</h5>
+                        <div class="para">
+                            Mumbai, often known as the City of Dreams, offers a rich and diverse experience that
+                            captivated me during a recent city tour. The journey began at the iconic Gateway of India, a
+                            majestic colonial-era monument that stands proudly overlooking the Arabian Sea.
+                        </div>
+                        <span>
+                            <a href="single-review.html" class="read para-c">read more...</a>
+                        </span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card grid">
                     <a href="single-review.html">
-                        <div class="img-block"><img src="images/ooty.jpg" alt="ooty" class="h-100 w-100"></div>
+                        <div class="img-block h-100"><img src="images/ooty.jpg" alt="ooty" class="h-100 w-100"></div>
 
                     </a>
                     <div class="content">
+                        <div class="content-title flex">
+                            <h5>Ooty</h5>
+                            <div class="rating flex items-center">
+                                <p>7.5</p>
+                                <img src="images/check-star.svg" alt="star">
+                            </div>
+                        </div>
                         <p class="para-c para-f">Ooty, Tamil Nadu</p>
-                        <h5>Ooty</h5>
+                        <div class="para">
+                            Mumbai, often known as the City of Dreams, offers a rich and diverse experience that
+                            captivated me during a recent city tour. The journey began at the iconic Gateway of India, a
+                            majestic colonial-era monument that stands proudly overlooking the Arabian Sea.
+                        </div>
+                        <span>
+                            <a href="single-review.html" class="read para-c">read more...</a>
+                        </span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card grid">
                     <a href="single-review.html">
-                        <div class="img-block"><img src="images/varanasi.jpg" alt="varanasi" class="h-100 w-100"></div>
+                        <div class="img-block h-100"><img src="images/varanasi.jpg" alt="varanasi" class="h-100 w-100">
+                        </div>
 
                     </a>
                     <div class="content">
+                        <div class="content-title flex">
+                            <h5>Varanasi</h5>
+                            <div class="rating flex items-center">
+                                <p>7.5</p>
+                                <img src="images/check-star.svg" alt="star">
+                            </div>
+                        </div>
                         <p class="para-c para-f">Varanasi, Uttar Pradesh</p>
-                        <h5>Varanasi</h5>
+                        <div class="para">
+                            Mumbai, often known as the City of Dreams, offers a rich and diverse experience that
+                            captivated me during a recent city tour. The journey began at the iconic Gateway of India, a
+                            majestic colonial-era monument that stands proudly overlooking the Arabian Sea.
+                        </div>
+                        <span>
+                            <a href="single-review.html" class="read para-c">read more...</a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -184,138 +247,32 @@
             </div>
             <div class="container grid grid-4">
                 <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <a href="#" class="">Follow</a>
                     </div>
                     <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
+                        <div class="title">
+                            <h3 class="fw-500">Rahul</h3>
                         </div>
-                        <div class="date flex g-7 items-center ">
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
                             <img src="images/calendar.svg" alt="calendar" class="">
                             <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
                         </div>
 
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="img-block">
-                        <img src="images/nainital.jpg" alt="user-img" class="w-100 h-100">
-                    </div>
-                    <div class="content">
-                        <h3 class="fw-500">Rahul</h3>
-                        <div class="des flex g-7 items-center ">
-                            <img src="images/location.svg" alt="locals" class="">
-                            <p class="para-c para-f">Nainital</p>
-                        </div>
-                        <div class="date flex g-7 items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
 
                     </div>
                 </div>
@@ -325,6 +282,52 @@
     </section>
     </div>
     <!-- Feed end  -->
+    <!-- Footer start  -->
+    <footer>
+        <div class="sec flex pad">
+            <div class="footer-column">
+                <div class="block footer-logo">
+                    <a href="#" class=""><img src="images/Explore.svg" alt="logo"></a>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Pages</h3>
+                    <a href="review.html" class="link para-c flex">Review</a>
+                    <a href="#" class="link para-c flex">About</a>
+                    <a href="#" class="link para-c flex">Contact</a>
+                    <a href="#" class="link para-c flex">Destination</a>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Legal</h3>
+                    <a href="#" class="link para-c flex">Terms</a>
+                    <a href="#" class="link para-c flex">Privacy</a>
+                    <a href="#" class="link para-c flex">Support</a>
+                    <a href="#" class="link para-c flex">Help Centre</a>
+                </div>
+                <div class="block ">
+                    <h3 class="fw-500">Socials</h3>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/instagram.svg" alt="social-icon" class="invert"></a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/twitter.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/linkedin.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/youtube.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <small>© Atheros Intelligence Ltd. <span id="year"></span>, All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end  -->
     <!-- Scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -338,7 +341,7 @@
             centerPadding: '90px',
             slidesToShow: 3,
             variableWidth: true,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 3000,
             responsive: [
                 {
@@ -361,51 +364,11 @@
                 }
             ]
         });
-
-              // $(".slide-container").slick({
-        //     dots: true,
-        //     infinite: true,
-        //     speed: 300,
-        //     slidesToShow: 4,
-        //     slidesToScroll: 1,
-        //     //   arrow: true,
-        //     // autoplay: true,
-        //     autoplaySpeed: 3000,
-        //     responsive: [
-        //         {
-        //             breakpoint: 1025,
-        //             settings: {
-        //                 slidesToShow: 4,
-        //                 slidesToScroll: 1,
-        //                 dots: true,
-        //                 arrow: false,
-        //             },
-        //         },
-        //         {
-        //             breakpoint: 641,
-        //             settings: {
-        //                 slidesToShow: 1,
-        //                 slidesToScroll: 1,
-        //                 dots: true,
-        //                 arrow: false,
-        //             },
-        //         },
-        //         {
-        //             breakpoint: 480,
-        //             settings: {
-        //                 slidesToShow: 1,
-        //                 slidesToScroll: 1,
-        //                 dots: true,
-        //                 arrow: false,
-        //             },
-        //         },
-        //     ],
-        // });
     </script>
 </body>
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script> -->
-<script src="app.js"></script>
+<script src="js/common.js"></script>
 
 </html>

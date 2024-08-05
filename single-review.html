@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
     <title>Review Single | ExploreMates</title>
 </head>
 
@@ -15,15 +15,19 @@
     <header class="w-100">
         <div class="sec flex items-center">
             <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
-            <nav class="flex">
+            <nav class="flex items-center">
                 <a href="index.html" class="fw-500 f-16">Home</a>
                 <a href="review.html" class="fw-500 f-16">Review</a>
-                <a href="login.html" class="fw-500 f-16">Login</a>
-                <a href="singup.html" class="fw-500 f-16">SingUp</a>
+                <div id="log" class="flex ">
+                    <a href="login.html" class="fw-500 f-16">Login</a>
+                    <a id="singup" href="singup.html" class="fw-500 f-16">SingUp</a>
+                </div>
+                <div class="" id="user">
+                    <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                </div>
             </nav>
             <img src="images/menu.svg" alt="menu" class="menu">
         </div>
-
     </header>
     <!-- header end  -->
     <!-- Main start  -->
@@ -102,7 +106,7 @@
 <!-- Script start  -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="app.js"></script>
+<script src="js/common.js"></script>
 <!-- scrip end  -->
 
 </html>

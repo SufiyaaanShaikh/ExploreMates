@@ -5,29 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
-    <title>SingUp | ExploreMates</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
+    <title>SignUp | ExploreMates</title>
 </head>
 
 <body>
-    <section id="hero" class="grid vh-100 w-100 ">
+    <section id="hero" class="grid vh-100 w-100">
         <div class="left"></div>
-        <div class="right h-100 w-100 flex justify-content ">
+        <div class="right h-100 w-100 flex justify-content">
             <h1 class="fw-700">Hi, Get Started Now <img src="images/waving hand.svg" alt="waving-hand"></h1>
-            <h3 class="fw-500">Enter details to create your Travel Pulse account</h3>
-            <form action="" class="flex w-100">
-                <input type="text" placeholder="Full Name" class="fw-500 f-18" autofocus>
-                <input type="email" placeholder="Email Address" class="fw-500 f-18">
-                <input type="password" placeholder="Password" class="fw-500 f-18">
-                <input type="password" placeholder="Confirm Password" class="fw-500 f-18">
-                <button class="formBtn fw-700">Sign Up</button>
+            <h3 class="">Enter details to create your Travel Pulse account</h3>
+            <form id="signupForm" class="flex w-100">
+                <input id="name" name="name" type="text" placeholder="Full Name" class="fw-500 f-18" autofocus required>
+                <input id="email" name="email" type="email" placeholder="Email Address" class="fw-500 f-18" required>
+                <input id="password" name="password" type="password" placeholder="Password" class="fw-500 f-18"
+                    required>
+                <input id="confirmPassword" type="password" placeholder="Confirm Password" class="fw-500 f-18" required>
+                <button class="formBtn fw-700" type="submit">Sign Up</button>
                 <p class="acc-para fw-500">Already have an account?<a href="login.html" class="fw-500">Sign in to
                         account</a></p>
             </form>
         </div>
     </section>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script  src="js/app.js"></script>
 </body>
 
 </html>
