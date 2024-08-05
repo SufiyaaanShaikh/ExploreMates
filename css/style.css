@@ -1057,7 +1057,12 @@ footer .sec {
         opacity: 1;
         display: flex !important;
     }
-
+    header nav #log {
+        flex-direction: column;
+    }
+    .footer-column {
+        justify-content: left;
+    }
     /* Banner  */
     #main {
         height: unset;
