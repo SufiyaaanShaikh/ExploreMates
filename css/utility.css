@@ -31,7 +31,10 @@
 .para-c {
     color: #4e515c;
 }
-
+.position {
+    position: relative;
+    z-index: 5;
+}
 
 
 
@@ -118,7 +121,7 @@
 
 @media (max-width: 1281px) {
     .sec {
-        padding:  2em;
+        padding: 2em;
     }
 
     .heading {
@@ -138,10 +141,18 @@
     #main .heading {
         width: 62%;
     }
+
+    .page-head {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 769px) {
     .heading {
+        font-size: 35px;
+    }
+
+    .page-head {
         font-size: 35px;
     }
 }
@@ -149,6 +160,10 @@
 @media (max-width: 640px) {
     #main .heading {
         width: 70%;
+    }
+
+    .page-head {
+        font-size: 30px;
     }
 
     .sec {
@@ -159,6 +174,14 @@
 @media (max-width: 480px) {
     .heading {
         font-size: 25px;
+    }
+
+    .vh-100 {
+        height: 100svh;
+    }
+
+    .page-head {
+        font-size: 20px;
     }
 
     #main .heading {

@@ -15,23 +15,26 @@
     <section id="hero" class="grid vh-100 w-100">
         <div class="left login-left"></div>
         <div class="right h-100 w-100 flex justify-content">
-            <h1 class="fw-700">Welcome Back, Jonathan <img src="images/waving hand.svg" alt="waving-hand"></h1>
-            <h3 class="">Enter Login Details</h3>
-            <form id="loginForm" class="flex w-100">
-                <input id="loginEmail" type="email" name="loginEmail" placeholder="Email Address" class="fw-500 f-18"
-                    autofocus required>
-                <input id="loginPassword" name="loginPassword" type="password" placeholder="Password"
-                    class="fw-500 f-18" required>
-                <button type="submit" class="formBtn fw-700">Log In</button>
-                <p class="acc-para fw-500">Don’t have an account yet?<a href="singup.html" class="fw-500">Create
-                        account</a></p>
-            </form>
+            <div class="sec">
+                <a href="index.html" class="logo"><img src="images/Explore.svg" alt="logo" class="w-100 h-100 "></a>
+                <h1 class="fw-700">Welcome Back, Jonathan</h1>
+                <h3 class="">Enter Login Details</h3>
+                <form id="loginForm" class="flex w-100">
+                    <input id="loginEmail" type="email" name="loginEmail" placeholder="Email Address"
+                        class="fw-500 f-18" autofocus required autocomplete="off">
+                    <input id="loginPassword" name="loginPassword" type="password" placeholder="Password"
+                        class="fw-500 f-18" required autocomplete="off">
+                    <button type="submit" class="formBtn fw-700">Log In</button>
+                    <p class="acc-para fw-500">Don’t have an account yet?<a href="singup.html" class="fw-500">Create
+                            account</a></p>
+                </form>
+            </div>
         </div>
     </section>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script  src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
