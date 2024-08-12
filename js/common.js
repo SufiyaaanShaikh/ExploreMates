@@ -257,13 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  const setUpLogout = () => {
-    const logoutButton = document.querySelector("#logout");
-    logoutButton.addEventListener("click", () => {
-      localStorage.removeItem("isLoggedIn");
-      checkUserStatus(); // Recheck status after logout
-    });
-  };
+  
 
   // Event listener for the checkbox to toggle the dropdown based on user status
   checkBox.addEventListener("change", checkUserStatus);
@@ -330,7 +324,7 @@ function initializeFollowButtons() {
         updateButtonState(button, newState);
       } else {
         alert("Please create an account to follow.");
-        window.location.href = "signup.html";
+        // window.location.href = "signup.html";
       }
     });
   });
