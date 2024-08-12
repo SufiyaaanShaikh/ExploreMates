@@ -19,25 +19,37 @@
         <div class="sec flex items-center">
             <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
             <div class="right flex items-center">
-                <ul>
-                    <div class="" id="user">
-                        <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
-                    </div>
-                    <div class="drop">
-                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
-                        <button id="logout">Logout</button>
-                    </div>
-                </ul>
+
                 <nav class="flex">
                     <a href="index.html" class="fw-500 f-16">Home</a>
                     <a href="review.html" class="fw-500 f-16">Review</a>
-                    <div id="log" class="flex ">
-                        <a href="login.html" class="fw-500 f-16">Login</a>
-                        <a id="singup" href="singup.html" class="fw-500 f-16">SingUp</a>
-                    </div>
                 </nav>
+                <label for="profile-menu" class="profile-menu">
+                    <input type="checkbox" name="profile-menu" id="profile-menu">
+                    <!-- profile-icon  -->
+                    <div class="" id="user">
+                        <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                    </div>
+                    <!-- user-auth -->
+                    <div id="auth-dropdown" class="drop flex items-center ">
+                        <a href="login.html" class="fw-500 f-16">Login</a>
+                        <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
+                    </div>
+                    <!-- Drop  -->
+                    <div id="profile-dropdown" class="drop">
+                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
+                        <button id="logout">Logout</button>
+                    </div>
+                </label>
 
-                <img src="images/menu.svg" alt="menu" class="menu">
+                <!-- /* From Uiverse.io by Cevorob */ -->
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <img src="images/menu.svg" alt="menu" class="menu"> -->
             </div>
         </div>
     </header>
@@ -241,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="view-all text-center">
+            <div class="view-all text-center flex">
                 <a href="review.html" class="btn fw-500 para-f">View All</a>
             </div>
         </div>
@@ -260,11 +272,11 @@
                         <div class="img-block">
                             <img src="images/user.png" alt="user-img" class="w-100 h-100">
                         </div>
-                        <a href="#" class="">Follow</a>
+                        <button id="followBtn">Follow</button>
                     </div>
                     <div class="content">
                         <div class="title">
-                            <h3 class="fw-500">Rahul</h3>
+                            <h3 id="username" class="fw-500 "></h3>
                         </div>
                         <div class="detail flex items-center ">
                             <img src="images/destiniaion.svg" alt="locals" class="">
@@ -290,11 +302,11 @@
                         <div class="img-block">
                             <img src="images/user.png" alt="user-img" class="w-100 h-100">
                         </div>
-                        <a href="#" class="">Follow</a>
+                        <button id="followBtn">Follow</button>
                     </div>
                     <div class="content">
                         <div class="title">
-                            <h3 class="fw-500">Rahul</h3>
+                            <h3 id="username" class="fw-500 "></h3>
                         </div>
                         <div class="detail flex items-center ">
                             <img src="images/destiniaion.svg" alt="locals" class="">
@@ -320,11 +332,11 @@
                         <div class="img-block">
                             <img src="images/user.png" alt="user-img" class="w-100 h-100">
                         </div>
-                        <a href="#" class="">Follow</a>
+                        <button id="followBtn">Follow</button>
                     </div>
                     <div class="content">
                         <div class="title">
-                            <h3 class="fw-500">Rahul</h3>
+                            <h3 id="username" class="fw-500 "></h3>
                         </div>
                         <div class="detail flex items-center ">
                             <img src="images/destiniaion.svg" alt="locals" class="">
@@ -350,11 +362,11 @@
                         <div class="img-block">
                             <img src="images/user.png" alt="user-img" class="w-100 h-100">
                         </div>
-                        <a href="#" class="">Follow</a>
+                        <button id="followBtn">Follow</button>
                     </div>
                     <div class="content">
                         <div class="title">
-                            <h3 class="fw-500">Rahul</h3>
+                            <h3 id="username" class="fw-500 "></h3>
                         </div>
                         <div class="detail flex items-center ">
                             <img src="images/destiniaion.svg" alt="locals" class="">
@@ -451,6 +463,11 @@
         </div>
     </footer>
     <!-- Footer end  -->
+    <!-- SnackBar start  -->
+    <!-- <output class="snackbar flex justify-content items-center" id="snackbar">
+        <p class="msg f-16">Heloo</p>
+      </output> -->
+    <!-- SnackBar end -->
     <!-- Scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

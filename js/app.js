@@ -245,11 +245,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const storedPassword = localStorage.getItem("password");
 
         if (loginEmail !== storedEmail) {
-          setErr(4, "Email does not match our records.");
+          setErr(0, "Email does not match our records.");
         }
 
         if (loginPassword !== storedPassword) {
-          setErr(5, "Password does not match our records.");
+          setErr(1, "Password does not match our records.");
         }
 
         if (loginEmail === storedEmail && loginPassword === storedPassword) {
@@ -257,6 +257,8 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("isLoggedIn", "true");
           localStorage.setItem("justLoggedIn", "true");
           window.location.href = "index.html";
+        } else {
+          alert("SignUp first")
         }
       }
     });
@@ -271,19 +273,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Email Validation
     if (email.length === 0) {
-      setErr(4, "Email is required.");
+      setErr(0, "Email is required.");
       isValid = false;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErr(4, "Please enter a valid email address.");
+      setErr(0, "Please enter a valid email address.");
       isValid = false;
     }
 
     // Password Validation
     if (password.length === 0) {
-      setErr(5, "Password is required.");
+      setErr(1, "Password is required.");
       isValid = false;
     } else if (password.length < 6) {
-      setErr(5, "Password must be at least 6 characters long.");
+      setErr(1, "Password must be at least 6 characters long.");
       isValid = false;
     }
 

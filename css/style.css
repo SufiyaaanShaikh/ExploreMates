@@ -14,6 +14,7 @@
     transition: all 0.2s ease-in-out;
 }
 
+
 html,
 body {
     overflow-x: hidden;
@@ -88,7 +89,7 @@ body {
 }
 
 #hero .sec {
-    max-width: 500px;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -109,7 +110,6 @@ body {
 }
 
 #hero .right h3 {
-    font-size: 16px;
     color: #5B5B5B;
 }
 
@@ -118,9 +118,14 @@ body {
     margin-top: 1em;
 }
 
+#hero .right form .input-block {
+    height: 90px;
+}
+
 #hero .right form input {
     border-bottom: 1px solid #B4B4B4;
-    padding: 2em 0em 1.5em;
+    padding: 1em 0em 1em;
+    width: 100%;
 }
 
 form .formErr {
@@ -142,7 +147,7 @@ form .formErr {
     font-size: 16px;
     padding: 0.8em;
     border-radius: 50px;
-    margin: 3em 0em 1em 0em;
+    margin: 1em 0em;
     cursor: pointer;
 }
 
@@ -191,63 +196,69 @@ header .logo img {
     height: 4.2em;
 }
 
-header .right {
-    flex-direction: row-reverse;
-}
 
-header :is(.right, nav, #log) {
-    gap: 2em;
-}
-
-header ul {
+.profile-menu {
     position: relative;
-    cursor: pointer;
+    display: block;
 }
 
-ul .drop {
+.profile-menu input {
+    display: none;
+}
+
+.profile-menu .drop {
+    display: none;
     position: absolute;
-    top: 30px;
-    right: 10px;
+    top: 25px;
+    right: -30px;
+    width: 150px;
     background: #fff;
-    padding-inline: 15px 25px;
+    color: #000;
     border-radius: 10px;
-    /* scale: 0 0 ; */
+    transition: all 0.5s cubic-bezier(0, 1.12, 0.3, 1.38);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex-direction: column;
+    gap: 1em;
     height: 0;
     overflow: hidden;
-    width: 200px;
-    transition: all 0.5s cubic-bezier(0, 1.12, 0.3, 1.38);
 }
 
-.drop #name span {
-    /* font-weight: 600; */
+
+.profile-menu #auth-dropdown a {
+    color: #000;
 }
 
-.drop h4 {
+header :is(.right, nav, #user_auth) {
+    gap: 1.5em;
+}
+
+
+#profile-dropdown h4 {
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.drop button {
+#profile-dropdown button {
     background: transparent;
     font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.drop :is(h4, button) {
-    opacity: 0;
+#profile-dropdown button:hover {
+    color: rgba(255, 0, 0, 0.819);
 }
 
-header ul:hover :is(h4, button) {
+.drop.drop-checked {
+    display: block;
+    height: auto;
+    padding: 15px 20px;
+}
+
+nav.nav-active {
+    height: auto;
     opacity: 1;
 }
-
-header ul:hover .drop {
-    /* scale: 1 1; */
-    height: auto;
-    padding: 15px 25px;
-}
-
 
 header nav a {
     color: #000;
@@ -276,6 +287,75 @@ header nav #user img {
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
 }
+
+.burger {
+    position: relative;
+    width: 20px;
+    /* Further reduced from 30px */
+    height: 15px;
+    /* Further reduced from 22px */
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    /* Further reduced from 3px */
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 3px;
+    /* Further adjusted from 4px */
+}
+
+.burger input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+    /* Further adjusted from 19px */
+    left: 3px;
+    /* Further adjusted from 4px */
+}
+
+
+
 
 /* Banner  */
 #main {
@@ -592,8 +672,8 @@ header nav #user img {
     justify-content: space-between;
 }
 
-#main-feed .container .card .head-block a {
-    height: fit-content;
+#main-feed .container .card .head-block button {
+    cursor: pointer;
     font-size: 12px;
     color: #fff;
     background: #000;
@@ -601,11 +681,17 @@ header nav #user img {
     border-radius: 10px;
     border: 1px solid #000;
     font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100px;
 }
 
-#main-feed .container .card .head-block a:hover {
-    background: #fff;
-    color: #000;
+#main-feed .container .card .head-block button:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+#main-feed .container .card .head-block button:hover {
+    opacity: 0.8;
 }
 
 /* #main-feed .container .card .content {
@@ -618,7 +704,7 @@ header nav #user img {
 } */
 
 #main-feed .container .card .content .title h3 {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 
@@ -747,10 +833,45 @@ footer .sec {
     margin-top: 15px;
 }
 
+/* SnackBar  */
+.snackbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    margin: 0 auto;
+    height: 50px;
+    width: min(100%, 400px);
+    background: #121212;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.msg {
+    font-size: 16px;
+}
 
+.snackbar {
+    animation: 0.3s linear slidein,
+        0.3s ease-out 3s slideout;
+    ;
+}
 
+@keyframes slidein {
+    from {
+        transform: translateY(100%)
+    }
+}
 
+@keyframes slideout {
+    to {
+        transform: translateY(100%);
+    }
+}
 
 
 
@@ -932,7 +1053,9 @@ footer .sec {
 
 /* Extra Large screen  */
 @media (max-width: 1281px) {
-
+    #hero .sec {
+        padding: 0 1em;
+    }
 
     #main .main-search {
         margin-top: 1.5em;
@@ -958,18 +1081,8 @@ footer .sec {
         font-size: 35px;
     }
 
-    #hero .right {
-        padding: 3em 4em 1em 4em;
-    }
-
-    #hero .right h3,
-    #hero .right form .acc-para {
-        font-size: 18px;
-    }
-
     #hero .right form button {
-        font-size: 18px;
-        margin: 2em 0em 1em 0em;
+        margin: 1em 0em;
     }
 
     /* Home Page  */
@@ -1019,16 +1132,10 @@ footer .sec {
 @media (max-width: 769px) {
 
     /* SingUp Page  */
-    #hero .right {
-        padding: 3em 2em 1em 2em;
-    }
 
     #hero .right h1 {
+        line-height: 35px;
         font-size: 26px;
-    }
-
-    #hero .right h3 {
-        font-size: 18px;
     }
 
     #hero .right form input,
@@ -1168,12 +1275,13 @@ footer .sec {
         width: 100%;
         padding-bottom: 0.5em;
         opacity: 0;
-        display: none !important;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
     }
 
     header .right {
-        flex-direction: row;
-        gap: 1em;
+        gap: 1em !important;
     }
 
     header .nav-show {
@@ -1185,6 +1293,9 @@ footer .sec {
         flex-direction: column;
     }
 
+    .burger {
+        display: block;
+    }
 
     /* Banner  */
     #main {
