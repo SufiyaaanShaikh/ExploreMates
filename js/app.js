@@ -26,8 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("email", email);
           localStorage.setItem("password", password);
           // alert("Form submitted successfully!");
-          signupForm.reset(); // Clear the form
-          window.location.href = "login.html";
+          createSnackbar(`Form submitted successfully!`);
+          setTimeout(() => {
+            signupForm.reset(); // Clear the form
+            window.location.href = "login.html";
+          }, 2000);
         } else {
           setErr(3, "Passwords do not match.");
         }
@@ -125,9 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
           // alert("Login Successful");
           localStorage.setItem("isLoggedIn", "true");
           localStorage.setItem("justLoggedIn", "true");
-          window.location.href = "index.html";
+          createSnackbar(`Login Successful`);
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 2000);
         } else {
-          alert("SignUp first")
+          // alert("SignUp first");
+          createSnackbar(`SignUp first`, shouldFollow = true);
         }
       }
     });
@@ -166,7 +173,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Create Snackbar Notification
+function createSnackbar(message, shouldFollow) {
+  const snackbar = document.createElement("div");
+  snackbar.classList.add("snackbar");
 
+  const msg = document.createElement("p");
+  msg.textContent = message;
+  msg.classList.add("msg");
+  if (shouldFollow) {
+    snackbar.style.backgroundColor = " rgb(255, 73, 66)";
+    msg.style.color = " #fff";
+
+  }
+  snackbar.appendChild(msg);
+  document.body.appendChild(snackbar);
+
+  setTimeout(() => {
+    snackbar.remove();
+  }, 3000); // Snackbar disappears after 3 seconds
+}
 
 
 
