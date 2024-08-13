@@ -1,236 +1,19 @@
-
-// // Scroll
-// $(window).on("scroll load", function () {
-//   if ($(window).scrollTop() > 90) {
-//     $("header").addClass("header-active");
-//   } else {
-//     $("header").removeClass("header-active");
-//   }
-// });
-
-// // Menu
-// try {
-//   const menu = document.querySelector(".menu");
-//   const nav = document.querySelector("nav");
-
-//   menu.addEventListener("click", () => {
-//     menu.classList.toggle("menu-ani");
-//     nav.classList.toggle("nav-show");
-//   });
-
-//   document.getElementById("year").innerHTML = new Date().getFullYear();
-// } catch (err) {
-//   console.log(err.message);
-// }
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const log = document.querySelector("#log");
-//   const user = document.querySelector("#user");
-
-//   const checkUserStatus = () => {
-//     const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-//     if (isLoggedIn) {
-//       if (log && user) {
-//         log.style.display = "none";
-//         user.style.display = "block";
-//         LogOut();
-//       }
-//     } else {
-//       if (log && user) {
-//         log.style.display = "flex";
-//         user.style.display = "none";
-//       }
-//     }
-//   };
-//   checkUserStatus();
-//   following();
-// });
-
-
-// // Show Name 
-// function showName(storedName) {
-
-//   let showname = document.querySelector("#name");
-//   showname.innerHTML = `<span class="fw-500">Name:</span> <br> ${storedName}`;
-
-// }
-
-
-// // LogOut 
-// function LogOut() {
-//   let logoutbtn = document.querySelector("#logout");
-//   logoutbtn.addEventListener("click", () => {
-//     localStorage.clear();
-//     window.location.reload();
-//   });
-// }
-
-
-// // Users Name 
-// function userName(username, nameArr) {
-
-//   nameArr.forEach((val, idx, arr) => {
-//     username[idx].innerHTML = val;
-//   });
-
-// }
-
-
-// function following() {
-//   const storedName = localStorage.getItem("name");
-//   const followBtn = document.querySelectorAll("#followBtn");
-//   const isLoggedIn = localStorage.getItem("isLoggedIn");
-//   const username = document.querySelectorAll("#username");
-//   const nameArr = ["Pikachu", "Danger", "Badheeerr", "Saud"];
-
-//   userName(username, nameArr);
-//   showName(storedName);
-
-//   followBtn.forEach((btn, idx) => {
-
-//     btn.addEventListener("click", () => {
-
-//       if (isLoggedIn) {
-
-//         const singleUserName = username[idx].innerHTML;
-//         const storeFollowing = `${storedName}, Follow ${singleUserName}`;
-//         localStorage.setItem(storeFollowing, "true");
-//         const isFollow = localStorage.getItem(storeFollowing);
-
-//         if (isFollow === "true") {
-
-//           if (btn.innerHTML == "Follow") {
-
-//             console.log(`${storedName}, Now Your Unfollowing ${singleUserName}`);
-//             btn.innerHTML = "Following";
-//             btn.style.backgroundColor = "transparent";
-//             btn.style.color = "#000";
-
-//             createSnackbar(singleUserName, btn);
-
-//           } else {
-//             console.log(`${storedName}, Now Your Following ${singleUserName}`);
-//             // localStorage.setItem(storeFollowing, "false");
-//             localStorage.removeItem(storeFollowing);
-
-//             btn.innerHTML = "Follow";
-//             btn.style.backgroundColor = "#000";
-//             btn.style.color = "#fff";
-//             createSnackbar(singleUserName, btn);
-//           }
-//         }
-//       } else {
-//         alert("Create account");
-//         window.location.href = "singup.html";
-//       }
-
-//     });
-
-//   });
-// }
-
-
-
-
-
-
-// function createSnackbar(singleUserName, btn) {
-//   // Creating SnackBar 
-//   const snackbar = document.createElement("div");
-//   snackbar.classList.add("snackbar");
-//   document.body.appendChild(snackbar);
-
-//   // msg 
-//   const msg = document.createElement("p");
-//   if (btn.innerHTML == "Follow") {
-//     msg.textContent = `Now your unfollowing ${singleUserName}`
-
-//   } else {
-//     msg.textContent = `Now your following ${singleUserName}`;
-//   }
-//   msg.classList.add("msg");
-//   snackbar.appendChild(msg);
-
-//   setTimeout(() => {
-//     snackbar.remove();
-//   }, 3000); // Snackbar disappears after 3 seconds
-// }
-
-
-
-
-
-// Scroll Event to Toggle Header Class
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Scroll Event to Toggle Header Class
 $(window).on("scroll load", function () {
   if ($(window).scrollTop() > 90) {
     $("header").addClass("header-active");
+    $("nav").addClass("nav-bgchange");
   } else {
     $("header").removeClass("header-active");
+    $("nav").removeClass("nav-bgchange");
   }
 });
 
-// Menu Toggle Functionality
-try {
-  // const menu = document.querySelector(".menu");
-  const burger = document.querySelector("#burger");
-  const nav = document.querySelector("nav");
-
-  burger.addEventListener("change", () => {
-    if (burger.checked) {
-      nav.classList.add("nav-active");
-    } else {
-      nav.classList.remove("nav-active");
-    }
-  });
-
-  // menu.addEventListener("click", () => {
-  //   menu.classList.toggle("menu-ani");
-  //   nav.classList.toggle("nav-show");
-  // });
-
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-} catch (err) {
-  console.log(err.message);
-}
-
 // DOM Content Loaded Event
 document.addEventListener("DOMContentLoaded", function () {
-
-
   const authDrop = document.querySelector("#auth-dropdown");
   const profileDrop = document.querySelector("#profile-dropdown");
-  const checkBox = document.querySelector("#profile-menu");
+  const profileMenu = document.querySelector("#profile-menu");
 
   const checkUserStatus = () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -248,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const toggleDropdown = () => {
-    if (checkBox.checked) {
+    if (profileMenu.checked) {
       authDrop.classList.add("drop-checked");
       profileDrop.classList.add("drop-checked");
     } else {
@@ -257,11 +40,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  
-
   // Event listener for the checkbox to toggle the dropdown based on user status
-  checkBox.addEventListener("change", checkUserStatus);
+  profileMenu.addEventListener("change", () => {
+    const nav = document.querySelector("nav");
+    if (profileMenu.checked) {
+      burger.checked = false; // Uncheck burger when profile-menu is checked
+      nav.classList.remove("nav-active");
+    }
+    checkUserStatus();
+  });
 
+  // Menu Toggle Functionality
+  function setupMenuToggle() {
+
+    const nav = document.querySelector("nav");
+    const burger = document.querySelector("#burger");
+
+
+    burger.addEventListener("change", () => {
+      if (burger.checked) {
+        nav.classList.add("nav-active");
+        profileMenu.checked = false; // Uncheck profile-menu when burger is checked
+        toggleDropdown();
+      } else {
+        nav.classList.remove("nav-active");
+      }
+    });
+  }
+  try {
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  }
+  catch (error) {
+    console.error(error);
+  }
+
+
+  setupMenuToggle();
   // Initial check on page load
   checkUserStatus();
 
@@ -278,11 +93,16 @@ function showName(storedName) {
 function setUpLogout() {
   const logoutButton = document.querySelector("#logout");
   logoutButton.addEventListener("click", () => {
-    localStorage.clear();
-    window.location.reload();
+    setTimeout(() => {
+      localStorage.clear();
+      window.location.reload();
+    }, 2000);
+      createSnackbar(`Goodbye! You’ve been logged out.`, shouldFollow = true);
+
+
   });
 }
-
+// setTimeout(setUpLogout(), 3000);
 // Display Usernames
 function displayUsernames(userElements, nameArray) {
   userElements.forEach((element, index) => {
@@ -323,7 +143,8 @@ function initializeFollowButtons() {
 
         updateButtonState(button, newState);
       } else {
-        alert("Please create an account to follow.");
+        createSnackbar(`Please create an account to follow.`, shouldFollow = true);
+        // alert("Please create an account to follow.");
         // window.location.href = "signup.html";
       }
     });
@@ -344,14 +165,18 @@ function updateButtonState(button, isFollowing) {
 }
 
 // Create Snackbar Notification
-function createSnackbar(message) {
+function createSnackbar(message, shouldFollow) {
   const snackbar = document.createElement("div");
   snackbar.classList.add("snackbar");
 
   const msg = document.createElement("p");
   msg.textContent = message;
   msg.classList.add("msg");
+  if (shouldFollow) {
+    snackbar.style.backgroundColor = " rgb(255, 73, 66)";
+    msg.style.color = " #fff";
 
+  }
   snackbar.appendChild(msg);
   document.body.appendChild(snackbar);
 
