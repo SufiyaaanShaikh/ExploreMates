@@ -1,3 +1,5 @@
+
+
 // Scroll Event to Toggle Header Class
 $(window).on("scroll load", function () {
   if ($(window).scrollTop() > 90) {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   profileMenu.addEventListener("change", () => {
     const nav = document.querySelector("nav");
     if (profileMenu.checked) {
-      burger.checked = false; // Uncheck burger when profile-menu is checked
+      document.querySelector("#burger").checked = false; // Uncheck burger when profile-menu is checked
       nav.classList.remove("nav-active");
     }
     checkUserStatus();
@@ -52,10 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Menu Toggle Functionality
   function setupMenuToggle() {
-
     const nav = document.querySelector("nav");
     const burger = document.querySelector("#burger");
-
 
     burger.addEventListener("change", () => {
       if (burger.checked) {
@@ -67,21 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
   try {
     document.getElementById("year").innerHTML = new Date().getFullYear();
-
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error);
   }
-
 
   setupMenuToggle();
   // Initial check on page load
   checkUserStatus();
 
   initializeFollowButtons();
-});
+}); 
 
 // Display User's Name
 function showName(storedName) {
@@ -93,20 +91,18 @@ function showName(storedName) {
 function setUpLogout() {
   const logoutButton = document.querySelector("#logout");
   logoutButton.addEventListener("click", () => {
+    localStorage.clear(); // Clear localStorage immediately
+    createSnackbar("Goodbye! You’ve been logged out.", true); // Show snackbar
     setTimeout(() => {
-      localStorage.clear();
-      window.location.reload();
+      window.location.reload(); // Reload after 2 seconds
     }, 2000);
-      createSnackbar(`Goodbye! You’ve been logged out.`, shouldFollow = true);
-
-
   });
 }
-// setTimeout(setUpLogout(), 3000);
+
 // Display Usernames
-function displayUsernames(userElements, nameArray) {
-  userElements.forEach((element, index) => {
-    element.innerHTML = nameArray[index];
+function displayUsernames(elements, array) {
+  elements.forEach((element, index) => {
+    element.innerHTML = array[index];
   });
 }
 
@@ -116,39 +112,52 @@ function initializeFollowButtons() {
   const followButtons = document.querySelectorAll("#followBtn");
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   const userElements = document.querySelectorAll("#username");
-  const nameArray = ["Rahul", "Shaina", "Alfiyaa", "Mamta"];
+  const cityElements = document.querySelectorAll("#city");
 
-  displayUsernames(userElements, nameArray);
+  // Fetch data using async/await
+  const fetchingData = async () => {
+    try {
+      const response = await fetch('../Data/usersData.json');
+      const data = await response.json();
+      const usernames = data.map(user => user.username);
+      const cities = data.map(user => user.address.city);
+      displayUsernames(userElements, usernames);
+      displayUsernames(cityElements, cities);
+
+      // Set up follow buttons after data is loaded
+      followButtons.forEach((button, index) => {
+        const singleUserName = usernames[index];
+        const followKey = `${storedName}_Follow_${singleUserName}`;
+        const isFollowing = localStorage.getItem(followKey) === "true";
+
+        updateButtonState(button, isFollowing);
+
+        button.addEventListener("click", () => {
+          if (isLoggedIn) {
+            const currentState = button.innerHTML === "Following";
+            const newState = !currentState;
+
+            if (newState) {
+              localStorage.setItem(followKey, "true");
+              createSnackbar(`You are now following ${singleUserName}`);
+            } else {
+              localStorage.removeItem(followKey);
+              createSnackbar(`You have unfollowed ${singleUserName}`);
+            }
+
+            updateButtonState(button, newState);
+          } else {
+            createSnackbar("Please create an account to follow.", true);
+          }
+        });
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  fetchingData();
   showName(storedName);
-
-  followButtons.forEach((button, index) => {
-    const singleUserName = userElements[index].innerHTML;
-    const followKey = `${storedName}_Follow_${singleUserName}`;
-    const isFollowing = localStorage.getItem(followKey) === "true";
-
-    updateButtonState(button, isFollowing);
-
-    button.addEventListener("click", () => {
-      if (isLoggedIn) {
-        const currentState = button.innerHTML === "Following";
-        const newState = !currentState;
-
-        if (newState) {
-          localStorage.setItem(followKey, "true");
-          createSnackbar(`You are now following ${singleUserName}`);
-        } else {
-          localStorage.removeItem(followKey);
-          createSnackbar(`You have unfollowed ${singleUserName}`);
-        }
-
-        updateButtonState(button, newState);
-      } else {
-        createSnackbar(`Please create an account to follow.`, shouldFollow = true);
-        // alert("Please create an account to follow.");
-        // window.location.href = "signup.html";
-      }
-    });
-  });
 }
 
 // Update Button State Based on Follow Status
@@ -172,11 +181,12 @@ function createSnackbar(message, shouldFollow) {
   const msg = document.createElement("p");
   msg.textContent = message;
   msg.classList.add("msg");
-  if (shouldFollow) {
-    snackbar.style.backgroundColor = " rgb(255, 73, 66)";
-    msg.style.color = " #fff";
 
+  if (shouldFollow) {
+    snackbar.style.backgroundColor = "rgb(255, 73, 66)";
+    msg.style.color = "#fff";
   }
+
   snackbar.appendChild(msg);
   document.body.appendChild(snackbar);
 

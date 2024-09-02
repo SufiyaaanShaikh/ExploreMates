@@ -479,6 +479,7 @@ header nav #user img {
 #main-how .container {
     gap: 1em;
     padding: 3em 0em;
+    flex-wrap: wrap;
 }
 
 #main-how .container .card {
@@ -486,6 +487,8 @@ header nav #user img {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 15px;
     background: #fff;
+    height: 17em;
+    max-width: 17em;
 }
 
 #main-how .container .card:hover {
@@ -620,6 +623,7 @@ header nav #user img {
 
 .view-all {
     margin-top: 3.5em;
+
 }
 
 .view-all a {
@@ -642,7 +646,10 @@ header nav #user img {
     z-index: 5;
     background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
 }
+#main-feed .sec {
+    flex-direction: column;
 
+}
 #main-feed .container {
     gap: 2em 1em;
     margin-top: 2.5em;
@@ -849,6 +856,8 @@ footer .sec {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 11;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px -10px 20px 2px; */
 }
 
 .msg {
@@ -1046,7 +1055,13 @@ footer .sec {
 .star {
     height: 50px;
 }
-
+/* Feed Page  */
+.main-feed {
+    margin-bottom: 0 !important;
+}
+.feed-sec {
+    padding-top: 7em !important;
+}
 
 /* Responsive  */
 @media (max-width: 1440px) {}

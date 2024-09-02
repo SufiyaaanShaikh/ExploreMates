@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.querySelector("#email").value.trim();
       const password = document.querySelector("#password").value.trim();
       const confirmPassword = document.querySelector("#confirmPassword").value.trim();
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
 
       const isValid = validateForm(name, email, password, confirmPassword);
-
-      if (isValid) {
+      
+      if (isLoggedIn) {
+        createSnackbar(`You already have an account`, shouldFollow = true);
+      }
+      else if (isValid) {
         if (password === confirmPassword) {
           localStorage.setItem("name", name);
           localStorage.setItem("email", email);
@@ -31,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
             signupForm.reset(); // Clear the form
             window.location.href = "login.html";
           }, 2000);
-        } else {
-          setErr(3, "Passwords do not match.");
         }
+      } else {
+        setErr(3, "Passwords do not match.");
       }
+
     });
   } catch (err) {
     console.log(err.message);
@@ -105,6 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Login Form
   try {
     const loginForm = document.querySelector("#loginForm");
+    const username = document.querySelector("#username")
+    const storedName = localStorage.getItem("name");
+
+    if (storedName) {
+      username.innerText = `Welcome Back, ${storedName}`;
+
+    }
 
     loginForm.addEventListener("submit", (event) => {
       event.preventDefault();

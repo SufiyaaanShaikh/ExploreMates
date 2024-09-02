@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
+    <title>Feed | ExploreMates</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="w-100">
+        <div class="sec flex items-center">
+            <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
+            <div class="right flex items-center">
+
+                <nav class="flex">
+                    <a href="index.html" class="fw-500 f-16">Home</a>
+                    <a href="feed.html" class="fw-500 f-16">Users</a>
+                    <a href="review.html" class="fw-500 f-16">Review</a>
+                </nav>
+                <label for="profile-menu" class="profile-menu">
+                    <input type="checkbox" name="profile-menu" id="profile-menu">
+                    <!-- profile-icon  -->
+                    <div class="" id="user">
+                        <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                    </div>
+                    <!-- user-auth -->
+                    <div id="auth-dropdown" class="drop flex items-center ">
+                        <a href="login.html" class="fw-500 f-16">Login</a>
+                        <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
+                    </div>
+                    <!-- Drop  -->
+                    <div id="profile-dropdown" class="drop">
+                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
+                        <button id="logout">Logout</button>
+                    </div>
+                </label>
+
+                <!-- /* From Uiverse.io by Cevorob */ -->
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <img src="images/menu.svg" alt="menu" class="menu"> -->
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+    <!-- Feed start  -->
+    <section id="main-feed" class="main-feed position">
+        <div class="feed-sec sec  pad flex justify-content ">
+            <div class="title">
+                <h2 class="fw-700 sec-head text-center">Travel Feed</h2>
+                <p class="head-para  para-c para-f text-center">Find a travel buddy</p>
+            </div>
+            <div class="container grid grid-4">
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <a href="#" class="flex items-center justify-content">View Profile</a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="view-all text-center ">
+                <a href="feed.html" class="btn fw-500 para-f">View All</a>
+            </div> -->
+    </section>
+   
+    <!-- Feed end  -->
+</body>
+<!-- Script start  -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/common.js"></script>
+<!-- scrip end  -->
+
+</html>
