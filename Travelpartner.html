@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
+    <title>User Profile | ExploreMates</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="w-100">
+        <div class="sec flex items-center">
+            <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
+            <div class="right flex items-center">
+
+                <nav class="flex">
+                    <a href="index.html" class="fw-500 f-16">Home</a>
+                    <a href="feed.html" class="fw-500 f-16">Users</a>
+                    <a href="review.html" class="fw-500 f-16">Review</a>
+                </nav>
+                <label for="profile-menu" class="profile-menu">
+                    <input type="checkbox" name="profile-menu" id="profile-menu">
+                    <!-- profile-icon  -->
+                    <div class="" id="user">
+                        <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                    </div>
+                    <!-- user-auth -->
+                    <div id="auth-dropdown" class="drop flex items-center ">
+                        <a href="login.html" class="fw-500 f-16">Login</a>
+                        <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
+                    </div>
+                    <!-- Drop  -->
+                    <div id="profile-dropdown" class="drop">
+                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
+                        <button id="logout">Logout</button>
+                    </div>
+                </label>
+
+                <!-- /* From Uiverse.io by Cevorob */ -->
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <img src="images/menu.svg" alt="menu" class="menu"> -->
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+     <section id="profile-main">
+        <div class="">
+            <div class="bg">
+            </div>
+            <div class="container flex  items-center">
+                <div class="profile-pic ">
+                    <img src="images/user.png" alt="" class="w-100 h-100">
+                </div>
+                <h2 class="sec-head ">Shaina Ansari</h2>
+                <h3 class="f-16 para-c">Uzbekistan, Tashkent</h3>
+                <p class="profil-para para-f para-c">I’m web designer, I work in programs like figma, adobe photoshop, adobe illustrator</p>
+                <div class="profile-details ">
+                    <div class="block ">
+                        <p class="numbers">80</p>
+                        <p class="des">Post</p>
+                    </div>
+                    <div class="block">
+                        <p class="numbers">50</p>
+                        <p class="des">Followers</p>
+                    </div>
+                    <div class="block">
+                        <p class="numbers">90</p>
+                        <p class="des">Following</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </section>
+</body>
+<script src="js/common.js"></script>
+
+</html>
