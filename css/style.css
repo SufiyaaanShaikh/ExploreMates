@@ -642,8 +642,6 @@ header nav #user img {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-bottom: 26em;
     border-radius: 0 0 30px 30px;
-    position: relative;
-    z-index: 5;
     background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
 }
 
@@ -681,7 +679,7 @@ header nav #user img {
     justify-content: space-between;
 }
 
-#main-feed .container .card .head-block button {
+#followBtn {
     cursor: pointer;
     font-size: 12px;
     color: #fff;
@@ -694,12 +692,12 @@ header nav #user img {
     width: 100px;
 }
 
-#main-feed .container .card .head-block button:active {
+#followBtn:active {
     background: #333;
     transform: scale(0.95);
 }
 
-#main-feed .container .card .head-block button:hover {
+#followBtn:hover {
     opacity: 0.8;
 }
 
@@ -848,7 +846,6 @@ footer .sec {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 6;
     margin: 0 auto;
     height: 50px;
     width: min(100%, 400px);
@@ -1060,7 +1057,7 @@ footer .sec {
 
 /* Feed Page  */
 .main-feed {
-    margin-bottom: 0 !important;
+    /* margin-bottom: 0 !important; */
 }
 
 .feed-sec {
@@ -1068,17 +1065,26 @@ footer .sec {
 }
 
 /* TravelPartner  */
+#profile-main {
+    margin-bottom: 26em;
+}
+
 #profile-main .bg {
-    background: #6B705C;
+    background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
     width: 100%;
     min-height: 40vh;
+}
 
+#profile-main .profile-block {
+    background: #fff;
+    border-radius: 0 0 30px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #profile-main .container {
     max-width: 700px;
     min-height: 70vh;
-    background-color: #4169E1;
+    background: #fff;
     margin-inline: auto;
     flex-direction: column;
 }
@@ -1108,24 +1114,61 @@ footer .sec {
     max-width: 50%;
     text-align: center;
 }
+
 #profile-main .container .profile-details {
     width: 100%;
+    margin-top: 2em;
     text-align: center;
     margin-inline: auto;
 
 }
+
 #profile-main .container .profile-details .block {
     display: inline-block;
     padding-inline: 3em;
 }
+
 #profile-main .container .profile-details .block:nth-child(2) {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+
 #profile-main .container .profile-details .block .numbers {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 10px;
+}
+
+#profile-main .container .profile-details .block .des {
+    font-size: 14px;
+}
+
+.btn-block {
+    gap: 3em;
+    margin-top: 3em;
+}
+
+#msgBtn {
+    cursor: pointer;
+    font-size: 12px;
+    color: #000;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100px;
+}
+
+#msgBtn:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+#msgBtn:hover {
+    background: #000;
+    color: #fff;
 }
 
 /* Responsive  */
@@ -1310,6 +1353,11 @@ footer .sec {
         padding: 2em 4em;
     }
 
+    /* Travel Partner Page  */
+    #profile-main {
+        margin-bottom: unset !important;
+    }
+
 }
 
 /* Small Screen  */
@@ -1487,5 +1535,24 @@ footer .sec {
 
     #single-r .content p {
         font-size: 14px;
+    }
+
+    /* Travel Partner Page  */
+    #profile-main .container .profile-pic {
+        height: 6em;
+        width: 6em;
+    }
+
+    #profile-main .container .profil-para {
+        font-size: 10px;
+    }
+
+    #profile-main .container .profile-details .block .numbers,
+    #profile-main .container .profile-details .block .numbers {
+        font-size: 14px;
+    }
+
+    #profile-main .container .profile-details .block {
+        padding-inline: 1.7em;
     }
 }

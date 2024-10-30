@@ -52,36 +52,116 @@
         </div>
     </header>
     <!-- header end  -->
-     <section id="profile-main">
+
+    <section id="profile-main" class="position">
         <div class="">
-            <div class="bg">
-            </div>
-            <div class="container flex  items-center">
-                <div class="profile-pic ">
-                    <img src="images/user.png" alt="" class="w-100 h-100">
-                </div>
-                <h2 class="sec-head ">Shaina Ansari</h2>
-                <h3 class="f-16 para-c">Uzbekistan, Tashkent</h3>
-                <p class="profil-para para-f para-c">I’m web designer, I work in programs like figma, adobe photoshop, adobe illustrator</p>
-                <div class="profile-details ">
-                    <div class="block ">
-                        <p class="numbers">80</p>
-                        <p class="des">Post</p>
+            <div class="bg"></div>
+            <div class="profile-block">
+                <div class="container flex items-center">
+                    <div class="profile-pic">
+                        <img src="images/user.png" alt="" class="w-100 h-100">
                     </div>
-                    <div class="block">
-                        <p class="numbers">50</p>
-                        <p class="des">Followers</p>
+                    <h2 id="username" class="sec-head username"></h2>
+                    <h3 id="city" class="f-16 para-c city">Turkey, Ankara</h3>
+                    <p class="profil-para para-f para-c">I’m a web designer, working with Figma, Photoshop, and
+                        Illustrator</p>
+                    <div class="profile-details">
+                        <div class="block ">
+                            <p class="numbers">80</p>
+                            <p class="des f-16">Post</p>
+                        </div>
+                        <div class="block">
+                            <p class="numbers">50</p>
+                            <p class="des f-16">Followers</p>
+                        </div>
+                        <div class="block">
+                            <p class="numbers">90</p>
+                            <p class="des f-16">Following</p>
+                        </div>
                     </div>
-                    <div class="block">
-                        <p class="numbers">90</p>
-                        <p class="des">Following</p>
+                    <div class="btn-block flex">
+                        <button id="followBtn">Follow</button>
+                        <button id="msgBtn">Message</button>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Footer start  -->
+    <footer class="w-100">
+        <div class="sec flex pad">
+            <div class="footer-column w-100 flex">
+                <div class="block footer-logo flex">
+                    <a href="#" class=""><img src="images/Explore.svg" alt="logo"></a>
+                    <div class="follow">
+                        <h3 class="fw-500">Follow us</h3>
+                        <div class="container">
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/instagram.svg" alt="social-icon"
+                                        class="invert"></a>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/twitter.svg" alt="social-icon"
+                                        class="invert"></a>
 
-     </section>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/linkedin.svg" alt="social-icon"
+                                        class="invert"></a>
+
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/youtube.svg" alt="social-icon"
+                                        class="invert"></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Pages</h3>
+                    <a href="review.html" class="link para-c flex">Review</a>
+                    <a href="#" class="link para-c flex">About</a>
+                    <a href="#" class="link para-c flex">Contact</a>
+                    <a href="#" class="link para-c flex">Destination</a>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Legal</h3>
+                    <a href="#" class="link para-c flex">Terms</a>
+                    <a href="#" class="link para-c flex">Privacy</a>
+                    <a href="#" class="link para-c flex">Support</a>
+                    <a href="#" class="link para-c flex">Help Centre</a>
+                </div>
+                <div class="block social-block">
+                    <h3 class="fw-500">Socials</h3>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/instagram.svg" alt="social-icon" class="invert"></a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/twitter.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/linkedin.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/youtube.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <small>© Atheros Intelligence Ltd. <span id="year"></span>, All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end  -->
 </body>
+<!-- Script start  -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/common.js"></script>
+<!-- Script end  -->
 
 </html>
