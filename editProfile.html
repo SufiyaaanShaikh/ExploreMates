@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css">
+    <title>Myaccount | ExploreMates</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="w-100">
+        <div class="sec flex items-center">
+            <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
+            <div class="right flex items-center">
+                <nav class="flex">
+                    <a href="index.html" class="fw-500 f-16">Home</a>
+                    <a href="feed.html" class="fw-500 f-16">Users</a>
+                    <a href="review.html" class="fw-500 f-16">Review</a>
+                </nav>
+                <label for="profile-menu" class="profile-menu">
+                    <input type="checkbox" name="profile-menu" id="profile-menu">
+                    <div id="user">
+                        <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
+                    </div>
+                    <div id="auth-dropdown" class="drop flex">
+                        <a href="login.html" class="fw-500 f-16">Login</a>
+                        <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
+                    </div>
+                    <div id="profile-dropdown" class="drop">
+                        <a href="myAccount.html" id="name"><span class="fw-500">Name:</span> </a>
+                        <button id="logout">Logout</button>
+                    </div>
+                </label>
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+    <div class="sec myacc">
+        <div class="container">
+            <div class="content">
+                <div class="list">
+                    <div class="topic">Account</div>
+                    <div class="tab home" data-tab="home">My Profile</div>
+                    <div class="tab blog" data-tab="blog">Change Password</div>
+                    <div class="tab help" data-tab="help">Help & Support</div>
+                    <div class="tab code" data-tab="code">Logout</div>
+                    <div class="tab about" data-tab="about">About</div>
+                    <!-- <div class="slider"></div> -->
+                </div>
+                <div class="text-content">
+                    <div class="home text">
+                        <h2>My Account</h2>
+                        <div class="myacc-input-block ">
+                            <form class="grid">
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myName" class="f-16 fw-500">Name</label>
+                                    <input type="text" name="myName" id="myName" placeholder="Your Name" readonly>
+                                </div>
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myPhoto" class="f-16 fw-500">Profile Photo</label>
+                                    <input type="file" name="myPhoto" id="myPhoto" placeholder="Profile Photo" accept="image/*">
+                                </div>
+                                <div class="myacc-block flex justify-content">
+                                    <label for="myBio" class="f-16 fw-500">Bio</label>
+                                    <input type="text" name="myBio" id="myBio" placeholder="Bio about your self">
+                                </div>
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myEmail" class="f-16 fw-500" readonly>Email</label>
+                                    <input type="email" name="myEmail" id="myEmail" placeholder="Your Email">
+                                </div>
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myPhone" class="f-16 fw-500">Phone</label>
+                                    <input type="tel" name="myPhone" id="myPhone" placeholder="Phone Number">
+                                </div>
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myAge" class="f-16 fw-500">Age</label>
+                                    <input type="text" name="myAge" id="myAge" placeholder="Your Age">
+                                </div>
+                                <div class="myacc-block flex justify-content ">
+                                    <label for="myAddress" class="f-16 fw-500">Address</label>
+                                    <input type="text" name="myAddress" id="myAddress" placeholder="Your Address">
+                                </div>
+                                <button type="submit" id="editSaveBtn" class="editSaveBtn">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="blog text">
+                        <h2>Change Password</h2>
+                        <p>Manage your account password here.</p>
+                    </div>
+                    <div class="help text">
+                        <h2>Help & Support</h2>
+                        <p>Find assistance and support options here.</p>
+                    </div>
+                    <div class="code text">
+                        <h2>Logout</h2>
+                        <p>Click below to log out of your account.</p>
+                    </div>
+                    <div class="about text">
+                        <h2>About</h2>
+                        <p>Learn more about our platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Script start  -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/editProfile.js"></script>
+<script src="js/common.js"></script>
+<!-- Script end  -->
+
+</html>

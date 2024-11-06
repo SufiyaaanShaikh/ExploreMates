@@ -7,15 +7,14 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utility.css">
-    <title>Feed | ExploreMates</title>
+    <title>User Profile | ExploreMates</title>
 </head>
 
 <body>
     <!-- header start -->
     <header class="w-100">
-        <div class="sec flex items-center justify-content">
+        <div class="sec flex items-center">
             <div class="logo"><a href="index.html"><img src="images/Explore.svg" alt="logo"></a></div>
-           
             <div class="right flex items-center">
 
                 <nav class="flex">
@@ -53,27 +52,41 @@
         </div>
     </header>
     <!-- header end  -->
-    <!-- Feed start  -->
-    <section id="main-feed" class="main-feed position">
-        <div class="feed-sec sec  pad flex ">
-            <div class="title">
-                <div class="feedSearchBox flex items-center justify-content text-center">
-                    <img src="images/search-black.svg" alt="search">
-                    <input type="text" id="feedSearch" placeholder="Destination">
+
+    <section id="profile-main" class="position">
+        <div class="">
+            <div class="bg"></div>
+            <div class="profile-block">
+                <div class="container flex items-center">
+                    <div class="profile-pic">
+                        <img src="images/user.png" alt="" class="w-100 h-100">
+                    </div>
+                    <h2 id="profileUserName" class="sec-head username"></h2>
+                    <h3 id="profileCity" class="f-16 para-c city">Turkey, Ankara</h3>
+                    <p class="profil-para para-f para-c">I’m a web designer, working with Figma, Photoshop, and
+                        Illustrator</p>
+                    <div class="profile-details">
+                        <div class="block ">
+                            <p class="numbers">80</p>
+                            <p class="des f-16">Post</p>
+                        </div>
+                        <div class="block">
+                            <p class="numbers">50</p>
+                            <p class="des f-16">Followers</p>
+                        </div>
+                        <div class="block">
+                            <p class="numbers">90</p>
+                            <p class="des f-16">Following</p>
+                        </div>
+                    </div>
+                    <div class="btn-block flex">
+                        <button id="followBtn" class="followBtn">Follow</button>
+                        <button id="msgBtn">Message</button>
+                    </div>
                 </div>
-                <h2 class="text-center fw-500 feedHeading">Travel Feed</h2>
-                <!-- <p class="head-para  para-c para-f text-center">Find a travel buddy</p> -->
             </div>
-            <div id="feedContainer" class="container grid grid-4">
-               
-
-            </div>
-            <!-- <div class="view-all text-center ">
-                <a href="feed.html" class="btn fw-500 para-f">View All</a>
-            </div> -->
+        </div>
     </section>
-
-    <!-- Feed end  -->
     <!-- Footer start  -->
     <footer class="w-100">
         <div class="sec flex pad">
@@ -148,8 +161,8 @@
 <!-- Script start  -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/feed.js"></script>
 <script src="js/common.js"></script>
-<!-- scrip end  -->
+<script src="js/userProfile.js"></script>
+<!-- Script end  -->
 
 </html>

@@ -29,13 +29,13 @@
                         <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
                     </div>
                     <!-- user-auth -->
-                    <div id="auth-dropdown" class="drop flex items-center ">
+                    <div id="auth-dropdown" class="drop flex">
                         <a href="login.html" class="fw-500 f-16">Login</a>
                         <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
                     </div>
                     <!-- Drop  -->
                     <div id="profile-dropdown" class="drop">
-                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
+                        <a href="myAccount.html" id="name"><span class="fw-500">Name:</span> </a>
                         <button id="logout">Logout</button>
                     </div>
                 </label>
@@ -65,14 +65,14 @@
     </section>
     <!-- Review Heading end  -->
     <!-- Main start  -->
-    <section id="review" class="">
+    <section id="review" class="position">
         <div class="sec">
             <div class="title flex items-center">
                 <div class=" grid">
                     <h2 class="fw-700 sec-head">Top places with reviews</h2>
                     <p class="para-f para-c para-f"> Travelers want to see more reviews of these places.</p>
                 </div>
-                <a href="#" class="write flex justify-content items-center">
+                <a href="writeReview.html" class="write flex justify-content items-center">
                     <img src="images/pen.svg" alt="pen">
                     <p class="para-c para-f">Write a review</p>
                 </a>
@@ -172,6 +172,76 @@
         </div>
     </section>
     <!-- Main end  -->
+        <!-- Footer start  -->
+    <footer class="w-100">
+        <div class="sec flex pad">
+            <div class="footer-column w-100 flex">
+                <div class="block footer-logo flex">
+                    <a href="#" class=""><img src="images/Explore.svg" alt="logo"></a>
+                    <div class="follow">
+                        <h3 class="fw-500">Follow us</h3>
+                        <div class="container">
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/instagram.svg" alt="social-icon"
+                                        class="invert"></a>
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/twitter.svg" alt="social-icon"
+                                        class="invert"></a>
+
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/linkedin.svg" alt="social-icon"
+                                        class="invert"></a>
+
+                            </div>
+                            <div class="card">
+                                <a href="#" class="social"><img src="images/youtube.svg" alt="social-icon"
+                                        class="invert"></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Pages</h3>
+                    <a href="review.html" class="link para-c flex">Review</a>
+                    <a href="#" class="link para-c flex">About</a>
+                    <a href="#" class="link para-c flex">Contact</a>
+                    <a href="#" class="link para-c flex">Destination</a>
+                </div>
+                <div class="block">
+                    <h3 class="fw-500">Legal</h3>
+                    <a href="#" class="link para-c flex">Terms</a>
+                    <a href="#" class="link para-c flex">Privacy</a>
+                    <a href="#" class="link para-c flex">Support</a>
+                    <a href="#" class="link para-c flex">Help Centre</a>
+                </div>
+                <div class="block social-block">
+                    <h3 class="fw-500">Socials</h3>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/instagram.svg" alt="social-icon" class="invert"></a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/twitter.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/linkedin.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                    <div class="card">
+                        <a href="#" class="social"><img src="images/youtube.svg" alt="social-icon" class="invert"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <small>© Atheros Intelligence Ltd. <span id="year"></span>, All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end  -->
 </body>
 <!-- Script start  -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

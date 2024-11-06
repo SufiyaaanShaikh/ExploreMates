@@ -20,24 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const isLoggedIn = localStorage.getItem("isLoggedIn");
 
       const isValid = validateForm(name, email, password, confirmPassword);
-      
+
       if (isLoggedIn) {
-        createSnackbar(`You already have an account`, shouldFollow = true);
+        createSnackbar(`You already have an account`,  true);
+        return;
       }
       else if (isValid) {
-        if (password === confirmPassword) {
-          localStorage.setItem("name", name);
-          localStorage.setItem("email", email);
-          localStorage.setItem("password", password);
-          // alert("Form submitted successfully!");
-          createSnackbar(`Form submitted successfully!`);
-          setTimeout(() => {
-            signupForm.reset(); // Clear the form
-            window.location.href = "login.html";
-          }, 2000);
-        }
-      } else {
-        setErr(3, "Passwords do not match.");
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        // alert("Form submitted successfully!");
+        createSnackbar(`Form submitted successfully!`);
+        setTimeout(() => {
+          signupForm.reset(); // Clear the form
+          window.location.href = "login.html";
+        }, 2000);
       }
 
     });
@@ -60,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sign-Up Form Validation
   function validateForm(name, email, password, confirmPassword) {
-    let returnVal = true;
+    let isValid = true;
     clearErrors();
 
     // Name Validation
@@ -82,28 +79,32 @@ document.addEventListener("DOMContentLoaded", function () {
     // Email Validation
     if (email.length === 0) {
       setErr(1, "Email is required.");
-      returnVal = false;
+      isValid = false;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setErr(1, "Please enter a valid email address.");
-      returnVal = false;
+      isValid = false;
     }
 
     // Password Validation
     if (password.length === 0) {
       setErr(2, "Password is required.");
-      returnVal = false;
+      isValid = false;
     } else if (password.length < 6) {
       setErr(2, "Password must be at least 6 characters long.");
-      returnVal = false;
+      isValid = false;
     }
 
     // Confirm Password Validation
     if (confirmPassword.length === 0) {
       setErr(3, "Confirm password is required.");
-      returnVal = false;
+      isValid = false;
+    }
+    if (password !== confirmPassword) {
+      setErr(3, "Passwords do not match.");
+      isValid = false;
     }
 
-    return returnVal;
+    return isValid;
   }
 
 
@@ -130,9 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (loginEmail !== storedEmail) {
           setErr(0, "Email does not match our records.");
-        }
-
-        if (loginPassword !== storedPassword) {
+        } else if (loginPassword !== storedPassword) {
           setErr(1, "Password does not match our records.");
         }
 
@@ -146,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }, 2000);
         } else {
           // alert("SignUp first");
-          createSnackbar(`SignUp first`, shouldFollow = true);
+          createSnackbar(`SignUp first`, true);
         }
       }
     });

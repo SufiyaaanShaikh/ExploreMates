@@ -4,17 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="ExploreMates">
-    <meta property="og:description" content="In a world where the urge to explore new places and immerse oneself in diverse cultures is becoming 
-    more widespread, many solo travelers encounter a set of challenges that often hinder their adventures.">
-    <meta property="og:image" content="https://explore-mates.vercel.app/images/Explore.svg">
-    <meta property="og:url" content="https://explore-mates.vercel.app/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ExploreMates">
-    <meta name="twitter:title" content="Journey with Like-Minded Explorers.">
-    <meta name="twitter:description" content="In a world where the urge to explore new places and immerse oneself in diverse cultures is becoming more widespread, many solo travelers encounter a set of challenges that often hinder their adventur">
-    <meta name="twitter:image" content="https://explore-mates.vercel.app/images/Explore.svg">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utility.css">
@@ -43,13 +32,13 @@
                         <img src="images/profil.svg" class="w-100 h-100" alt="profile-icon">
                     </div>
                     <!-- user-auth -->
-                    <div id="auth-dropdown" class="drop flex items-center ">
+                    <div id="auth-dropdown" class="drop flex">
                         <a href="login.html" class="fw-500 f-16">Login</a>
                         <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
                     </div>
                     <!-- Drop  -->
                     <div id="profile-dropdown" class="drop">
-                        <h4 id="name"><span class="fw-500">Name:</span> </h4>
+                        <a href="myAccount.html" id="name"><span class="fw-500">Name:</span> </a>
                         <button id="logout">Logout</button>
                     </div>
                 </label>
@@ -72,7 +61,7 @@
             <h1 class="fw-700 heading">Journey with Like-Minded Explorers.</h1>
             <div class="main-search flex items-center ">
                 <img src="images/search-black.svg" alt="search" class="invert">
-                <input type="text" placeholder="Search Destinations" class="w-100">
+                <input id="searchInput" type="text" placeholder="Search Destinations" class="w-100" autocomplete="off">
             </div>
             <div class="main-vac">
                 <h3 class="fw-700">Top Vacation Destinations</h3>
@@ -296,8 +285,8 @@
                 <h2 class="fw-700 sec-head text-center">Travel Feed</h2>
                 <p class="head-para  para-c para-f text-center">Find a travel buddy</p>
             </div>
-            <div class="container grid grid-4">
-                <div class="card grid">
+            <div  id="feedContainer" class="container grid grid-4 main-feedContainer">
+                <!-- <div class="card grid">
                     <div class="head-block flex items-center ">
                         <div class="img-block">
                             <img src="images/user.png" alt="user-img" class="w-100 h-100">
@@ -321,7 +310,7 @@
                             <p class="para-c para-f">Duo</p>
                         </div>
                         <div class="view ">
-                            <a href="Travelpartner.html" class="flex items-center justify-content">View Profile</a>
+                            <button id="viewProfileBtn" class="flex items-center justify-content">View Profile</button>
                         </div>
                     </div>
                 </div>
@@ -349,37 +338,7 @@
                             <p class="para-c para-f">Duo</p>
                         </div>
                         <div class="view ">
-                            <a href="Travelpartner.html" class="flex items-center justify-content">View Profile</a>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="card grid">
-                    <div class="head-block flex items-center ">
-                        <div class="img-block">
-                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
-                        </div>
-                        <button id="followBtn">Follow</button>
-                    </div>
-                    <div class="content">
-                        <div class="title">
-                            <h3 id="username" class="fw-500 "></h3>
-                        </div>
-                        <div class="detail flex items-center ">
-                            <img src="images/destiniaion.svg" alt="locals" class="">
-                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
-                        </div>
-                        <div class="detail flex items-center ">
-                            <img src="images/calendar.svg" alt="calendar" class="">
-                            <p class="para-c para-f">2 days ago</p>
-                        </div>
-                        <div class="detail flex items-center ">
-                            <img src="images/group.svg" alt="group" class="">
-                            <p class="para-c para-f">Duo</p>
-                        </div>
-                        <div class="view ">
-                            <a href="Travelpartner.html" class="flex items-center justify-content">View Profile</a>
+                            <button id="viewProfileBtn" class="flex items-center justify-content">View Profile</button>
                         </div>
 
 
@@ -409,12 +368,42 @@
                             <p class="para-c para-f">Duo</p>
                         </div>
                         <div class="view ">
-                            <a href="Travelpartner.html" class="flex items-center justify-content">View Profile</a>
+                            <button id="viewProfileBtn" class="flex items-center justify-content">View Profile</button>
                         </div>
 
 
                     </div>
                 </div>
+                <div class="card grid">
+                    <div class="head-block flex items-center ">
+                        <div class="img-block">
+                            <img src="images/user.png" alt="user-img" class="w-100 h-100">
+                        </div>
+                        <button id="followBtn">Follow</button>
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <h3 id="username" class="fw-500 "></h3>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/destiniaion.svg" alt="locals" class="">
+                            <p id="city" class="para-c para-f">Mumbai to Nainital</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/calendar.svg" alt="calendar" class="">
+                            <p class="para-c para-f">2 days ago</p>
+                        </div>
+                        <div class="detail flex items-center ">
+                            <img src="images/group.svg" alt="group" class="">
+                            <p class="para-c para-f">Duo</p>
+                        </div>
+                        <div class="view ">
+                            <button id="viewProfileBtn" class="flex items-center justify-content">View Profile</button>
+                        </div>
+
+
+                    </div>
+                </div> -->
             </div>
             <div class="view-all text-center ">
                 <a href="feed.html" class="btn fw-500 para-f">View All</a>
@@ -539,5 +528,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script> -->
 <script src="js/common.js"></script>
+<script src="js/feed.js"></script>
+
 
 </html>
