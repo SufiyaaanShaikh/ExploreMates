@@ -43,7 +43,7 @@ const fetchingData = async () => {
 window.onload = fetchingData;
 
 const viewProfile = (userName, cityName) => {
-    const profileUrl = `UserProfile.html?username=${encodeURIComponent(userName)}&city=${encodeURIComponent(cityName)}`;
+    const profileUrl = `userProfile.html?username=${encodeURIComponent(userName)}&city=${encodeURIComponent(cityName)}`;
     window.location.href = profileUrl;
 };
 
