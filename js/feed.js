@@ -5,7 +5,7 @@ const storedName = localStorage.getItem("name");
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 
 const urlParams = new URLSearchParams(window.location.search);
-const destinationQuery = urlParams.get('q');
+const destinationQuery = urlParams.get('q')?.toLowerCase();
 
 const fetchingData = async () => {
     try {
@@ -13,24 +13,15 @@ const fetchingData = async () => {
         const data = await response.json();
 
         const filteredData = destinationQuery
-            ? data.filter(user => user.address.city.toLowerCase() === destinationQuery.toLowerCase())
+            ? data.filter(user => user.address.city.toLowerCase().includes(destinationQuery))
             : data;
 
-        // If the filtered data is empty, display a "No User Found" message
+        // If no users found for the specified city, display a message
         if (filteredData.length === 0 && destinationQuery) {
-            feedContainer.style.display = "flex"
-            let notFound = document.createElement("p");
-            notFound.classList.add('notFound', 'f-16', 'text-center', 'fw-500');
-            notFound.style.marginInline = "auto"
-            notFound.textContent = "No Users Found in this City";
-            feedContainer.appendChild(notFound);
-
-            // feedContainer.innerHTML = `<p>No User Found</p>`
-            // feedContainer.innerHTML = "No Users Found in this City";
-        } else if (mainFeedContainer) {
-            filteredData.slice(0, 4).forEach(user => userCards(user));
+            displayNoUsersFound();
         } else {
-            filteredData.forEach(user => userCards(user));
+            const usersToDisplay = mainFeedContainer ? filteredData.slice(0, 4) : filteredData;
+            usersToDisplay.forEach(user => userCards(user));
         }
 
         // Set initial follow button state for all cards
@@ -38,6 +29,15 @@ const fetchingData = async () => {
     } catch (error) {
         console.error("Error fetching data:", error);
     }
+};
+
+const displayNoUsersFound = () => {
+    feedContainer.style.display = "flex";
+    const notFound = document.createElement("p");
+    notFound.classList.add('notFound', 'f-16', 'text-center', 'fw-500');
+    notFound.style.marginInline = "auto";
+    notFound.textContent = "No Users Found in this City";
+    feedContainer.appendChild(notFound);
 };
 
 window.onload = fetchingData;
@@ -88,20 +88,21 @@ function displayFeedHeading() {
 
     feedSearch.addEventListener("keypress", (evt) => {
         if (evt.key === "Enter") {
-          const searchQuery = feedSearch.value.trim();
-          if (searchQuery.length === 0) {
-            window.location.href = `feed.html`;
-          } else if (searchQuery.length > 25) {
-            createSnackbar("Search query is too long.", true);
-          } else {
-            window.location.href = `feed.html?q=${encodeURIComponent(searchQuery)}`;
-          }
+            const searchQuery = feedSearch.value.trim();
+            if (searchQuery.length === 0) {
+                window.location.href = `feed.html`;
+            } else if (searchQuery.length > 25) {
+                createSnackbar("Search query is too long.", true);
+            } else {
+                window.location.href = `feed.html?q=${encodeURIComponent(searchQuery)}`;
+            }
         }
-      });
+    });
 
     if (destinationQuery) {
-        feedHeading.innerHTML = `Feed for '${destinationQuery.charAt(0).toUpperCase() + destinationQuery.slice(1)}'`;
-        feedSearch.setAttribute("value", destinationQuery.charAt(0).toUpperCase() + destinationQuery.slice(1));
+        const formattedQuery = destinationQuery.charAt(0).toUpperCase() + destinationQuery.slice(1);
+        feedHeading.innerHTML = `Feed for '${formattedQuery}'`;
+        feedSearch.setAttribute("value", formattedQuery);
     } else {
         feedHeading.innerHTML = "Travel Feed";
         feedSearch.setAttribute("value", "");
