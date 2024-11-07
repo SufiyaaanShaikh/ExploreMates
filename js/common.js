@@ -28,6 +28,19 @@ $(window).on("scroll load", function () {
   });
 });
 
+// script.js
+
+// Wait for the entire page to load (including images, CSS, etc.)
+window.addEventListener('load', () => {
+  // Hide the loader
+  const loader = document.getElementById('loader');
+  loader.style.display = 'none';
+
+  // Show the main content
+  const content = document.getElementById('content');
+  content.style.display = 'block';
+});
+
 // $(document).ready(function() {
 //   // Hide all text content by default, except for the first tab
 //   $(".text").hide();
