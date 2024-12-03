@@ -495,17 +495,17 @@
     },
     {
         "id": 26,
-        "username": "mumbai_artist",
-        "name": "Neha Mehta",
+        "username": "bhooms_head",
+        "name": "Bhoomi Guptaaaa",
         "address": {
             "street": "4 Versova Beach Road",
             "suite": "Flat 2D",
             "city": "Mumbai",
             "zipcode": "400061"
         },
-        "email": "neha.mehta@example.in",
+        "email": "bhoom.mehta@example.in",
         "phone": "9988776655",
-        "website": "mumbaiarttours.in",
+        "website": "bhooms.in",
         "company": {
             "name": "Mumbai Art Journeys",
             "catchPhrase": "Explore the art scene",
@@ -534,7 +534,7 @@
     {
         "id": 28,
         "username": "mumbai_trendsetter",
-        "name": "Simran Shah",
+        "name": "Fatima Siddiquie",
         "address": {
             "street": "18 Carter Road",
             "suite": "Flat 1A",

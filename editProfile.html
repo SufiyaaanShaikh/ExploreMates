@@ -14,7 +14,7 @@
     <div id="loader" class="loader">
         <div class="spinner"></div>
         <p>Loading...</p>
-      </div>
+    </div>
     <!-- header start -->
     <header class="w-100">
         <div class="sec flex items-center">
@@ -54,15 +54,16 @@
             <div class="content">
                 <div class="list">
                     <div class="topic">Account</div>
-                    <div class="tab home" data-tab="home">My Profile</div>
-                    <div class="tab blog" data-tab="blog">Change Password</div>
+                    <hr class="hori">
+                    <div class="tab myprofile" data-tab="myprofile">My Profile</div>
+                    <div class="tab change-password" data-tab="change-password">Change Password</div>
                     <div class="tab help" data-tab="help">Help & Support</div>
-                    <div class="tab code" data-tab="code">Logout</div>
-                    <div class="tab about" data-tab="about">About</div>
+                    <hr class="hori">
+                    <div class="tab logout" data-tab="logout">Logout</div>
                     <!-- <div class="slider"></div> -->
                 </div>
                 <div class="text-content">
-                    <div class="home text">
+                    <div class="myprofile text">
                         <h2>My Account</h2>
                         <div class="myacc-input-block ">
                             <form class="grid">
@@ -72,7 +73,8 @@
                                 </div>
                                 <div class="myacc-block flex justify-content ">
                                     <label for="myPhoto" class="f-16 fw-500">Profile Photo</label>
-                                    <input type="file" name="myPhoto" id="myPhoto" placeholder="Profile Photo" accept="image/*">
+                                    <input type="file" name="myPhoto" id="myPhoto" placeholder="Profile Photo"
+                                        accept="image/*">
                                 </div>
                                 <div class="myacc-block flex justify-content">
                                     <label for="myBio" class="f-16 fw-500">Bio</label>
@@ -98,21 +100,55 @@
                             </form>
                         </div>
                     </div>
-                    <div class="blog text">
+                    <div class="change-password text">
                         <h2>Change Password</h2>
-                        <p>Manage your account password here.</p>
+                        <div class="changePwd-container grid">
+                            <form class="grid">
+                                <div class="changePwd-block flex justify-content ">
+                                    <label for="ePassword" class="f-16 fw-500">Existing Password</label>
+                                    <div class="input-block flex">
+                                        <input type="password" name="ePassword" class="ePassword"
+                                            placeholder="Enter your current password">
+                                        <button class="eyeBtn"><img src="images/eye_closed.svg"
+                                                alt="eye_closed"></button>
+                                    </div>
+                                </div>
+                                <div class="changePwd-block flex justify-content ">
+                                    <label for="ePassword" class="f-16 fw-500">New Password</label>
+                                    <div class="input-block flex">
+                                        <input type="password" name="ePassword" class="ePassword"
+                                            placeholder="Enter your current password">
+                                        <button class="eyeBtn"><img src="images/eye_closed.svg"
+                                                alt="eye_closed"></button>
+                                    </div>
+                                </div>
+                                <div class="changePwd-block flex justify-content ">
+                                    <label for="ePassword" class="f-16 fw-500">Confirm Password</label>
+                                    <div class="input-block flex">
+                                        <input type="password" name="ePassword" class="ePassword"
+                                            placeholder="Enter your current password">
+                                        <button class="eyeBtn"><img src="images/eye_closed.svg"
+                                                alt="eye_closed"></button>
+                                    </div>
+                                </div>
+                                <button class="resetPwd">Reset password</button>
+                            </form>
+                            <div class="img-container">
+                                <div class="img-block">
+                                    <img src="images/laddak.jpg" alt="laddak">
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <div class="help text">
                         <h2>Help & Support</h2>
                         <p>Find assistance and support options here.</p>
                     </div>
-                    <div class="code text">
+                    <div class="logout text">
                         <h2>Logout</h2>
                         <p>Click below to log out of your account.</p>
-                    </div>
-                    <div class="about text">
-                        <h2>About</h2>
-                        <p>Learn more about our platform.</p>
                     </div>
                 </div>
             </div>

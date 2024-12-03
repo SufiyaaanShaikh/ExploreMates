@@ -41,13 +41,18 @@
                         <a id="singup" href="/signup.html" class="fw-500 f-16">SignUp</a>
                     </div>
                     <!-- Drop  -->
-                    <div id="profile-dropdown" class="drop">
-                        <a href="myAccount.html" id="name"><span class="fw-500">Name:</span> </a>
+                    <div id="profile-dropdown" class="drop para-f">
+                        <div class="name-block flex">
+                            Name:
+                            <a href="editProfile.html" >
+                                <img src="images/pen.svg" alt="pen" class="editprofile-btn">
+                            </a>
+                        </div>
+                        <a href="myAccount.html" id="name"><span class="fw-500"></span> </a>
                         <button id="logout">Logout</button>
                     </div>
                 </label>
 
-                <!-- /* From Uiverse.io by Cevorob */ -->
                 <label class="burger" for="burger">
                     <input type="checkbox" id="burger">
                     <span></span>
@@ -484,8 +489,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $('.slide-container').slick({
             dots: true,

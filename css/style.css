@@ -219,9 +219,9 @@ header .logo img {
     transition: all 0.5s cubic-bezier(0, 1.12, 0.3, 1.38);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     flex-direction: column;
-    gap: 1em;
-    height: 0;
+    align-items: baseline;
     overflow: hidden;
+    padding: 15px 20px;
 }
 
 
@@ -233,15 +233,24 @@ header :is(.right, nav, #user_auth) {
     gap: 1.5em;
 }
 
-
 #profile-dropdown a {
     font-size: 14px;
-    margin-bottom: 10px;
     color: black;
+    width: max-content;
 }
 
-#profile-dropdown a:hover {
+#profile-dropdown a span:hover {
     color: #4169E1;
+}
+
+#profile-dropdown .name-block {
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.editprofile-btn {
+    height: 15px;
 }
 
 #profile-dropdown button {
@@ -249,6 +258,7 @@ header :is(.right, nav, #user_auth) {
     font-size: 14px;
     text-decoration: underline;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 #profile-dropdown button:hover {
@@ -256,9 +266,9 @@ header :is(.right, nav, #user_auth) {
 }
 
 .drop.drop-checked {
-    display: block;
-    height: auto;
-    padding: 15px 20px;
+    /* display: flex; */
+    /* height: auto;
+    padding: 15px 20px; */
 }
 
 nav.nav-active {
@@ -1250,47 +1260,33 @@ footer .sec {
     place-items: center;
     bottom: 0px;
     right: 7px;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     background: #DEE7FF;
     border-radius: 50%;
     border: 4px solid #fff;
 }
 
 #profile-main .container .profile-pic .edit-icon img {
-    height: 18px;
+    height: 20px;
 }
 
-#shareBtn {
-    cursor: pointer;
-    font-size: 14px;
-    color: #fff;
-    background: #000;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 1px solid #000;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 100px;
-    gap: 9px;
-}
-
-#shareBtn img {
-    height: 15px;
-}
-
+#shareBtn,
 #editBtn {
     cursor: pointer;
     font-size: 14px;
     color: #fff;
     background: #000;
-    padding: 10px 20px;
+    padding: 15px 35px;
     border-radius: 10px;
     border: 1px solid #000;
-    font-weight: 500;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 100px;
     gap: 9px;
+}
+
+#shareBtn img,
+#editBtn img {
+    height: 15px;
 }
 
 #editBtn:active,
@@ -1299,14 +1295,11 @@ footer .sec {
     transform: scale(0.95);
 }
 
-#editBtn img {
-    height: 15px;
-}
-
 
 #profile-main .container h2 {
     font-weight: 500;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
+    padding-top: 15px;
 }
 
 #profile-main .container .profil-para {
@@ -1343,7 +1336,7 @@ footer .sec {
 }
 
 .btn-block {
-    gap: 3em;
+    gap: 1em;
     margin-top: 3em;
 }
 
@@ -1399,25 +1392,25 @@ footer .sec {
     margin: 0 1%;
     list-style: none;
     padding: 10px 40px;
-    color: #aaa;
+    color: #000;
     cursor: pointer;
     font-weight: 700;
-    transition: all ease 0.5s;
+    transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
     border-bottom: solid 3px rgba(255, 255, 255, 0);
     letter-spacing: 1px;
+    border-radius: 25px;
 }
 
 .tab-link:hover {
     color: #999;
-    border-color: #999;
 }
 
 .tab-link.active {
-    color: #333;
-    border-color: #333;
+    background: #000;
+    color: #fff;
 }
 
-.tab-link:nth-of-type(1).active {
+/* .tab-link:nth-of-type(1).active {
     color: #EE6534;
     border-color: #EE6534;
 }
@@ -1435,7 +1428,7 @@ footer .sec {
 .tab-link:nth-of-type(4).active {
     color: #333333;
     border-color: #333333;
-}
+} */
 
 .content-wrapper {
     padding: 40px 80px;
@@ -1476,7 +1469,7 @@ footer .sec {
 
 
 
-
+/* edit profile  */
 .myacc>.container {
     padding: 50px 40px;
     margin-top: 7em;
@@ -1484,12 +1477,9 @@ footer .sec {
 }
 
 .myacc>.container .topic {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
-}
-
-.myacc>.container .content>input {
-    display: none;
+    padding-left: 10px;
 }
 
 .container>.content {
@@ -1502,31 +1492,16 @@ footer .sec {
     flex-direction: column;
     position: relative;
     width: 20%;
+    border: 1px solid #80808057;
     margin-right: 50px;
+    padding: 10px;
 }
 
-.content .list label {
-    cursor: pointer;
-    height: 60px;
-    line-height: 60px;
-    font-size: 18px;
-    font-weight: 500;
-    padding-left: 25px;
-    transition: all 0.1s ease;
-    z-index: 10;
-}
-
-
-.content .slider {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 60px;
-    width: 100%;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-
-    background: #DEE7FF;
+.list .hori {
+    width: 87%;
+    background: #80808057;
+    height: 1px;
+    margin-left: 10px;
 }
 
 .content .text-content {
@@ -1545,12 +1520,12 @@ footer .sec {
 
 .tab {
     cursor: pointer;
-    padding: 10px;
+    margin: 10px;
 }
 
-.active-tab {
+/* .active-tab {
     color: gray;
-}
+} */
 
 .text-content .text {
     display: none;
@@ -1560,11 +1535,9 @@ footer .sec {
     display: block;
 }
 
-
 .content .list label:hover {
     color: #ccc;
 }
-
 
 .myacc-input-block {
 
@@ -1573,7 +1546,7 @@ footer .sec {
 
 .myacc-input-block form {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .myacc-block {
@@ -1582,22 +1555,82 @@ footer .sec {
 }
 
 .myacc-block input {
-    padding-left: 15px;
+    padding: 15px;
     width: 100%;
-    height: 4em;
     border-radius: 5px;
     border: 1px solid #000;
 }
+
 .editSaveBtn {
     background-color: #000;
     color: #fff;
-    height: 4em;
-    width: 300px;
+    padding: 15px;
+    width: 140px;
     cursor: pointer;
     border-radius: 10px;
     grid-area: 5 / 1 / 6 / 3;
 }
 
+.changePwd-container {
+    grid-template-columns: 50% 50%;
+}
+
+.changePwd-container form {
+    margin-top: 1em;
+    gap: 1.5em;
+}
+
+.changePwd-block {
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.changePwd-block .input-block {
+    padding: 10px;
+    border: 1px solid #000;
+
+    border-radius: 5px;
+}
+
+.changePwd-block .input-block input {
+    width: 100%;
+}
+
+.changePwd-block .input-block .eyeBtn {
+    background: transparent;
+    cursor: pointer;
+}
+
+.changePwd-block .input-block .eyeBtn img {
+    height: 20px;
+}
+
+form .resetPwd {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-container {
+    display: grid;
+    place-items: center;
+}
+
+.img-container .img-block {
+    height: 200px;
+    width: 300px;
+
+}
+
+.img-container .img-block img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 /* Responsive  */
 @media (max-width: 1440px) {}

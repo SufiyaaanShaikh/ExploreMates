@@ -1,4 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
+    // Default tab activation on page load
+    function activateDefaultTab() {
+        $(".text").hide(); // Hide all text content
+        $(".myprofile").show(); // Show the My Profile content
+        $(".tab").removeClass("active-tab"); // Remove active class from all tabs
+        $(".myprofile").addClass("active-tab"); // Add active class to the first tab
+    }
+
+    // Call the function to activate the default tab
+    activateDefaultTab();
+
     // Retrieve name and email from localStorage and set to input fields if they exist
     const storedName = localStorage.getItem("name");
     const storedEmail = localStorage.getItem("email");
@@ -19,12 +30,12 @@ $(document).ready(function() {
     let isModified = false;
 
     // Set up event listener for input changes
-    $("#myName, #myEmail, #myAge, #myPhone, #myAddress, #myBio").on("input", function() {
+    $("#myName, #myEmail, #myAge, #myPhone, #myAddress, #myBio").on("input", function () {
         isModified = true;
     });
 
     // Handle tab click events (check for unsaved changes)
-    $(".tab").click(function(event) {
+    $(".tab").click(function (event) {
         if (isModified) {
             // Prevent switching tabs if there are unsaved changes
             event.preventDefault();
@@ -38,17 +49,18 @@ $(document).ready(function() {
 
             // Remove active class and add it to the clicked tab
             $(".tab").removeClass("active-tab");
+            $(".myprofile").removeClass("active-tab");
             $(this).addClass("active-tab");
         }
     });
 
     // Handle the Save button click event
-    $("#editSaveBtn").click(function(event) {
+    $("#editSaveBtn").click(function (event) {
         event.preventDefault(); // Prevent form submission
 
         // Save updated values to localStorage
-        localStorage.setItem("name", $("#myName").val().trim()); // You may choose not to save the name as it's fixed
-        localStorage.setItem("email", $("#myEmail").val().trim()); // You may choose not to save the email as it's fixed
+        localStorage.setItem("name", $("#myName").val().trim());
+        localStorage.setItem("email", $("#myEmail").val().trim());
         localStorage.setItem("age", $("#myAge").val().trim());
         localStorage.setItem("phone", $("#myPhone").val().trim());
         localStorage.setItem("address", $("#myAddress").val().trim());

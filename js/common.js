@@ -32,38 +32,15 @@ $(window).on("scroll load", function () {
 
 // Wait for the entire page to load (including images, CSS, etc.)
 window.addEventListener('load', () => {
-  // Hide the loader
-  const loader = document.getElementById('loader');
-  loader.style.display = 'none';
+    // Hide the loader
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
 
-  // Show the main content
-  const content = document.getElementById('content');
-  content.style.display = 'block';
+    // Show the main content
+    const content = document.getElementById('content');
+    content.style.display = 'block';
 });
 
-// $(document).ready(function() {
-//   // Hide all text content by default, except for the first tab
-//   $(".text").hide();
-//   $(".home").show();
-
-//   // Set the first tab as active on load
-//   $(".tab").first().addClass("active-tab");
-
-//   // Handle tab click events
-//   $(".tab").click(function() {
-//       const tab = $(this).data("tab");
-
-//       // Hide all text content
-//       $(".text").hide();
-
-//       // Show the clicked tab's content
-//       $("." + tab).show();
-
-//       // Remove active class from all tabs and add it to the clicked tab
-//       $(".tab").removeClass("active-tab");
-//       $(this).addClass("active-tab");
-//   });
-// });
 
 
 // DOM Content Loaded Event
@@ -77,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (isLoggedIn) {
-      profileDrop.style.display = "block";
+      profileDrop.style.display = "flex";
       authDrop.style.display = "none";
       setUpLogout();
     } else {
@@ -216,7 +193,7 @@ function showName(storedName) {
   const nameElement = document.querySelector("#name");
   const myUserName = document.querySelector("#myUserName");
 
-  nameElement.innerHTML = `<span class="fw-500">Name:</span> <br> ${storedName}`;
+  nameElement.innerHTML = `<span class="fw-500">${storedName}</span> `;
   myUserName.innerText = `${storedName}`;
 }
 
